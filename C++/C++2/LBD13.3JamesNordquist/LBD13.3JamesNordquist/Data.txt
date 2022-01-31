@@ -1,0 +1,5 @@
+John 20 M
+Mary 26 F
+Arnold 17 M
+Jack 13 M
+Gerald 30 M

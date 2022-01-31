@@ -1,0 +1,76 @@
+﻿body 
+{
+	font-family:Trebuchet MS;
+	font-size:12pt;
+}
+
+#WelcomeText
+{
+	font-size:20pt;
+	font-family:Trebuchet MS;
+	
+}
+
+.Main
+{
+	font-family:Trebuchet MS;
+	width:75%;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+.Main .Courses
+{
+	font-size:12pt;
+}
+
+.Main .Enter
+{
+	font-size:12pt;
+}
+
+#EnterEvaluations
+{
+	border-style:none;
+	border-collapse:collapse;
+	border-width:0;
+}
+
+#EnterEvaluations .Separator
+{
+	border-right-style: solid;
+	padding-right:25px;
+	
+}
+
+#EnterEvaluations .Labels
+{
+	padding-left:25px;
+	padding-right:10px;	
+}
+
+
+#EnterEvaluations .HorizSeparator
+{
+	border-bottom-style: solid;
+}
+
+#EnterEvaluations .Title
+{
+	border-bottom-style: solid;
+	border-top-style: solid;
+	text-align:center;
+	color:Olive;
+}
+
+#EnterEvaluations .Comments
+{
+	Height:100px ;
+	Width:400px;
+}
+
+#EnterEvaluations .Validation
+{
+	color:Olive;
+}
+

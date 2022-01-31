@@ -1,0 +1,7 @@
+package javaCalculator;
+
+import javax.swing.JTextField;
+
+public class Screen extends JTextField {
+
+}

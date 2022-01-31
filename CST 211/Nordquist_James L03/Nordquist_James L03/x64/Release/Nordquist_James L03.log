@@ -1,0 +1,35 @@
+﻿  Card.cpp
+  Deck.cpp
+d:\cst 211\nordquist_james l03\nordquist_james l03\deck.cpp(28): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+d:\cst 211\nordquist_james l03\nordquist_james l03\deck.cpp(43): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+  Exception.cpp
+d:\cst 211\nordquist_james l03\nordquist_james l03\exception.cpp(38): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17134.0\ucrt\string.h(133): note: see declaration of 'strcpy'
+d:\cst 211\nordquist_james l03\nordquist_james l03\exception.cpp(54): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17134.0\ucrt\string.h(133): note: see declaration of 'strcpy'
+d:\cst 211\nordquist_james l03\nordquist_james l03\exception.cpp(90): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17134.0\ucrt\string.h(133): note: see declaration of 'strcpy'
+d:\cst 211\nordquist_james l03\nordquist_james l03\exception.cpp(125): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17134.0\ucrt\string.h(133): note: see declaration of 'strcpy'
+  stub.cpp
+  Table.cpp
+d:\cst 211\nordquist_james l03\nordquist_james l03\table.cpp(195): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+d:\cst 211\nordquist_james l03\nordquist_james l03\table.cpp(206): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+d:\cst 211\nordquist_james l03\nordquist_james l03\table.cpp(309): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+d:\cst 211\nordquist_james l03\nordquist_james l03\table.cpp(366): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+d:\cst 211\nordquist_james l03\nordquist_james l03\table.cpp(433): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+d:\cst 211\nordquist_james l03\nordquist_james l03\table.cpp(491): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+d:\cst 211\nordquist_james l03\nordquist_james l03\table.cpp(214): warning C4101: 'e': unreferenced local variable
+d:\cst 211\nordquist_james l03\nordquist_james l03\table.cpp(224): warning C4101: 'e': unreferenced local variable
+d:\cst 211\nordquist_james l03\nordquist_james l03\table.cpp(317): warning C4101: 'e': unreferenced local variable
+d:\cst 211\nordquist_james l03\nordquist_james l03\table.cpp(327): warning C4101: 'e': unreferenced local variable
+d:\cst 211\nordquist_james l03\nordquist_james l03\table.cpp(374): warning C4101: 'e': unreferenced local variable
+d:\cst 211\nordquist_james l03\nordquist_james l03\table.cpp(384): warning C4101: 'e': unreferenced local variable
+d:\cst 211\nordquist_james l03\nordquist_james l03\table.cpp(441): warning C4101: 'e': unreferenced local variable
+d:\cst 211\nordquist_james l03\nordquist_james l03\table.cpp(451): warning C4101: 'e': unreferenced local variable
+d:\cst 211\nordquist_james l03\nordquist_james l03\table.cpp(499): warning C4101: 'e': unreferenced local variable
+d:\cst 211\nordquist_james l03\nordquist_james l03\table.cpp(509): warning C4101: 'e': unreferenced local variable
+  Generating code
+  All 210 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Finished generating code
+  Nordquist_James L03.vcxproj -> D:\CST 211\Nordquist_James L03\x64\Release\Nordquist_James L03.exe

@@ -1,0 +1,16 @@
+D:\CST236\Lab08\CodedUIStarterCodeDemo\SimpleWPFCalculator\bin\Debug\SimpleWPFCalculator.exe.config
+D:\CST236\Lab08\CodedUIStarterCodeDemo\SimpleWPFCalculator\bin\Debug\SimpleWPFCalculator.exe
+D:\CST236\Lab08\CodedUIStarterCodeDemo\SimpleWPFCalculator\bin\Debug\SimpleWPFCalculator.pdb
+D:\CST236\Lab08\CodedUIStarterCodeDemo\SimpleWPFCalculator\obj\Debug\SimpleWPFCalculator.csprojAssemblyReference.cache
+D:\CST236\Lab08\CodedUIStarterCodeDemo\SimpleWPFCalculator\obj\Debug\bling.baml
+D:\CST236\Lab08\CodedUIStarterCodeDemo\SimpleWPFCalculator\obj\Debug\Window1.baml
+D:\CST236\Lab08\CodedUIStarterCodeDemo\SimpleWPFCalculator\obj\Debug\App.baml
+D:\CST236\Lab08\CodedUIStarterCodeDemo\SimpleWPFCalculator\obj\Debug\Window1.g.cs
+D:\CST236\Lab08\CodedUIStarterCodeDemo\SimpleWPFCalculator\obj\Debug\App.g.cs
+D:\CST236\Lab08\CodedUIStarterCodeDemo\SimpleWPFCalculator\obj\Debug\SimpleWPFCalculator_MarkupCompile.cache
+D:\CST236\Lab08\CodedUIStarterCodeDemo\SimpleWPFCalculator\obj\Debug\SimpleWPFCalculator.g.resources
+D:\CST236\Lab08\CodedUIStarterCodeDemo\SimpleWPFCalculator\obj\Debug\SimpleWPFCalculator.Properties.Resources.resources
+D:\CST236\Lab08\CodedUIStarterCodeDemo\SimpleWPFCalculator\obj\Debug\SimpleWPFCalculator.csproj.GenerateResource.cache
+D:\CST236\Lab08\CodedUIStarterCodeDemo\SimpleWPFCalculator\obj\Debug\SimpleWPFCalculator.csproj.CoreCompileInputs.cache
+D:\CST236\Lab08\CodedUIStarterCodeDemo\SimpleWPFCalculator\obj\Debug\SimpleWPFCalculator.exe
+D:\CST236\Lab08\CodedUIStarterCodeDemo\SimpleWPFCalculator\obj\Debug\SimpleWPFCalculator.pdb

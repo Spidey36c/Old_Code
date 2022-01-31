@@ -1,0 +1,38 @@
+﻿<Window x:Class="PlanetSelection.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PlanetSelection"
+        mc:Ignorable="d"
+        Title="Planet Selection" Height="800" Width="1000" ResizeMode="NoResize">
+    <Window.Resources>
+        <Image x:Key="Universe"  Source="/Images/Universe.jpg" Stretch="UniformToFill"/>
+        <Image x:Key="Galaxy" Source="/Images/GalaxySelect.jpg" Stretch="UniformToFill"/>
+        <Image x:Key="MilkyWay" Source="/Images/milky_way.jpg" Stretch="UniformToFill"/>
+        <Image x:Key="SolarSystem" Source="/Images/Solar_system.jpg" Stretch="UniformToFill"/>
+        <Image x:Key="Earth" Source="/Images/Earth.jpg" Stretch="UniformToFill"/>
+        <Image x:Key="Mars" Source="/Images/Mars.jpg" Stretch="UniformToFill"/>
+        <Image x:Key="Unknown" Source="/Images/UnknownPlanet.png" Stretch="UniformToFill"/>
+    </Window.Resources>
+    <Grid>
+        <ComboBox x:Name="UniverseOri" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="185" Height="27" IsEditable="True" GotFocus="UniverseOri_GotFocus" LostFocus="UniverseOri_LostFocus"/>
+        <ComboBox x:Name="GalaxyOri" HorizontalAlignment="Left" Margin="10,111,0,0" VerticalAlignment="Top" Width="185" Height="27" IsEditable="True" GotFocus="GalaxyOri_GotFocus" LostFocus="GalaxyOri_LostFocus"/>
+        <ComboBox x:Name="SolarSystemOri" HorizontalAlignment="Left" Margin="10,215,0,0" VerticalAlignment="Top" Width="185" Height="27" IsEditable="True" GotFocus="SolarSystemOri_GotFocus" LostFocus="SolarSystemOri_LostFocus"/>
+        <ComboBox x:Name="PlanetOri" HorizontalAlignment="Left" Margin="10,319,0,0" Width="185" Height="27" VerticalAlignment="Top" IsEditable="True" GotFocus="PlanetOri_GotFocus" LostFocus="PlanetOri_LostFocus"/>
+        <ComboBox x:Name="UniverseDest" HorizontalAlignment="Right" Margin="0,10,10,0" VerticalAlignment="Top" Width="185" Height="27" IsEditable="True" GotFocus="UniverseDest_GotFocus" LostFocus="UniverseDest_LostFocus"/>
+        <ComboBox x:Name="GalaxyDest" HorizontalAlignment="Right" Margin="0,111,10,0" VerticalAlignment="Top" Width="185" Height="27" IsEditable="True" GotFocus="GalaxyDest_GotFocus" LostFocus="GalaxyDest_LostFocus"/>
+        <ComboBox x:Name="SolarSystemDest" HorizontalAlignment="Right" Margin="0,215,10,0" VerticalAlignment="Top" Width="185" Height="27" IsEditable="True" GotFocus="SolarSystemDest_GotFocus" LostFocus="SolarSystemDest_LostFocus"/>
+        <ComboBox x:Name="PlanetDest" HorizontalAlignment="Right" Margin="0,319,10,0" VerticalAlignment="Top" Width="185" Height="27" IsEditable="True" GotFocus="PlanetDest_GotFocus" LostFocus="PlanetDest_LostFocus"/>
+        <Button x:Name="ClickSelection" Content="Button" Margin="200,10,200,317" Opacity="100" Click="button_Click"/>
+        <Label x:Name="Ori" Content="?/?/?/?" HorizontalAlignment="Left" Margin="10,0,0,194" VerticalAlignment="Bottom"/>
+        <Label x:Name="Dest" Content="?/?/?/?" HorizontalAlignment="Right" Margin="0,0,10,103" VerticalAlignment="Bottom"/>
+        <Label x:Name="To" Content="To" Margin="485,0,456,145" VerticalAlignment="Bottom"/>
+        <Button x:Name="Transport" Content="Transportation Selection" HorizontalAlignment="Right" Height="44" Margin="0,0,10,10" VerticalAlignment="Bottom" Width="205" Click="Transport_Click"/>
+        <Button x:Name="Cancel" Content="Cancel" HorizontalAlignment="Left" Height="44" Margin="10,0,0,10" VerticalAlignment="Bottom" Width="205" Click="Cancel_Click"/>
+        <Button x:Name="TimeSelect" Content="Select Arrival/Departure Time" Height="44" Margin="393,0,394,10" VerticalAlignment="Bottom" Click="TimeSelect_Click"/>
+        <Image x:Name="OriPlanet" HorizontalAlignment="Left" Margin="18,383,0,238" Width="155" Source="/Images/UnknownPlanet.png"/>
+        <Image x:Name="DestPlanet" HorizontalAlignment="Right" Margin="0,383,25,238" Width="155" Source="/Images/UnknownPlanet.png"/>
+
+    </Grid>
+</Window>

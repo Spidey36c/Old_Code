@@ -1,0 +1,96 @@
+package javaCalculator;
+
+import java.util.Scanner;
+
+import javax.swing.JTextField;
+
+public class Screen extends JTextField
+{
+	String current;
+	String screen;
+	String prevScreen = "";
+	Boolean newinput = true;
+	public Screen()
+	{
+		this.setSize(50,8);
+		this.setEditable(false);
+	}
+	
+	public void AddDigit(String digit)
+	{
+		if(newinput == true)
+		{
+			this.setText("");
+			newinput = false;
+		}
+		screen = prevScreen;
+		current += digit;
+		screen += current;
+		this.setText(screen);
+	}
+	
+	public void AddOperator(String op)
+	{
+		screen = prevScreen;
+		current += op;
+		screen += current;
+		prevScreen = screen;
+		this.setText(screen);
+		current = "";
+	}
+	
+	public void Negate()
+	{
+		if(current.charAt(0) == '-')
+		{
+			current = current.substring(1);
+		}
+		else
+		{
+			current = "-" + current;
+		}
+		
+		screen = prevScreen;
+		screen += current;
+		this.setText(screen);
+	}
+	
+	public double GetValue()
+	{
+		String value = this.getText();
+		double storedvalue;
+		double newvalue;
+		Scanner sc = new Scanner(value);
+		String operator;
+		
+		storedvalue = Double.parseDouble(sc.findInLine("[0-9]*|.[0-9]+|[0-9]+.[0-9]+"));
+		
+		while(sc.hasNext())
+		{
+			operator = sc.findInLine("[0-9]*").trim();
+			newvalue = Double.parseDouble(sc.findInLine("[0-9]*|.[0-9]+|[0-9]+.[0-9]+"));
+			
+			switch(operator)
+			{
+			case "+":
+				storedvalue += newvalue;
+			case "-":
+				storedvalue -= newvalue;
+			case "*":
+				storedvalue *= newvalue;
+			case "/":
+				storedvalue /= newvalue;
+			default:
+				this.setText("Invalid");
+				newinput = true;
+			}
+		}
+		sc.close();
+		return storedvalue;
+	}
+	
+	public void SetValue(String value)
+	{
+		this.setText(value);
+	}
+}

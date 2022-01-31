@@ -1,0 +1,17 @@
+Z:\CST324\Game Finder\bin\Release\Game Finder.exe.config
+Z:\CST324\Game Finder\bin\Release\Game Finder.exe
+Z:\CST324\Game Finder\bin\Release\Game Finder.pdb
+Z:\CST324\Game Finder\obj\Release\Game Finder.csprojAssemblyReference.cache
+Z:\CST324\Game Finder\obj\Release\Game_Finder.GameCreate.resources
+Z:\CST324\Game Finder\obj\Release\Game_Finder.ViewGame.resources
+Z:\CST324\Game Finder\obj\Release\Game_Finder.PrevGame.resources
+Z:\CST324\Game Finder\obj\Release\Game_Finder.UpdateAccount.resources
+Z:\CST324\Game Finder\obj\Release\Game_Finder.CreateAccount.resources
+Z:\CST324\Game Finder\obj\Release\Game_Finder.GameDesc.resources
+Z:\CST324\Game Finder\obj\Release\Game_Finder.Log.resources
+Z:\CST324\Game Finder\obj\Release\Game_Finder.LogIn.resources
+Z:\CST324\Game Finder\obj\Release\Game_Finder.Properties.Resources.resources
+Z:\CST324\Game Finder\obj\Release\Game Finder.csproj.GenerateResource.cache
+Z:\CST324\Game Finder\obj\Release\Game Finder.csproj.CoreCompileInputs.cache
+Z:\CST324\Game Finder\obj\Release\Game Finder.exe
+Z:\CST324\Game Finder\obj\Release\Game Finder.pdb

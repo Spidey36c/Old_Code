@@ -1,0 +1,65 @@
+package javaCalculator;
+
+import java.util.Scanner;
+
+import javax.swing.JTextField;
+
+public class Screen extends JTextField
+{
+	Boolean newinput = true;
+	public Screen()
+	{
+		this.setSize(50,8);
+		this.setEditable(false);
+	}
+	
+	public void AddDigit(String digit)
+	{
+		if(newinput == true)
+		{
+			this.setText("");
+			newinput = false;
+		}
+		String current = this.getText();
+		current += digit;
+		this.setText(current);
+	}
+	
+	public double GetValue()
+	{
+		String value = this.getText();
+		double storedvalue;
+		double newvalue;
+		Scanner sc = new Scanner(value);
+		String operator;
+		
+		storedvalue = Double.parseDouble(sc.findInLine("[0-9]*|.[0-9]+|[0-9]+.[0-9]+"));
+		
+		while(sc.hasNext())
+		{
+			operator = sc.findInLine("[0-9]*").trim();
+			newvalue = Double.parseDouble(sc.findInLine("[0-9]*|.[0-9]+|[0-9]+.[0-9]+"));
+			
+			switch(operator)
+			{
+			case "+":
+				storedvalue += newvalue;
+			case "-":
+				storedvalue -= newvalue;
+			case "*":
+				storedvalue *= newvalue;
+			case "/":
+				storedvalue /= newvalue;
+			default:
+				this.setText("Invalid");
+				newinput = true;
+			}
+		}
+		return storedvalue;
+	}
+	
+	public void SetValue(String value)
+	{
+		this.setText(value);
+	}
+}

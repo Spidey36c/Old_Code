@@ -1,0 +1,4 @@
+﻿  JamesNordquistProficiency.cpp
+z:\c++ 1\jamesnordquistproficiencydemo3\jamesnordquistproficiencydemo3\jamesnordquistproficiency.cpp(12): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.16299.0\ucrt\stdio.h(1272): note: see declaration of 'scanf'
+  JamesNordquistProficiencyDemo3.vcxproj -> Z:\C++ 1\JamesNordquistProficiencyDemo3\Debug\JamesNordquistProficiencyDemo3.exe

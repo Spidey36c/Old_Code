@@ -1,0 +1,27 @@
+/*ofstream report(filename);
+	if (report.fail())
+	{
+		cout << "Unable to open the file";
+		cout << "\n\nPress the enter key to try again";
+		cin.ignore(cin.rdbuf()->in_avail());
+		cin.getline(str, 2, '\n');
+		cin.ignore(cin.rdbuf()->in_avail());
+	}
+	else
+	{
+		report << "This is Pascal's triangle for the power of " << power << "\n\n\n";
+
+		for (row = 0; row <= power; row++)
+		{
+			for (space = 0; space < 37 - (row * 3); space++)
+			{
+				report << " ";
+			}
+			for (col = 0; col <= row; col++)
+			{
+				report << setw(6) << pascal_tri[row][col];
+			}
+			report << endl;
+		}
+		report.close();
+	}*/

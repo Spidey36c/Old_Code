@@ -1,0 +1,4 @@
+﻿  stube.cpp
+i:\c++\c++2\pe 15_2 james nordquist\pe 15_2 james nordquist\stube.cpp(151): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+  PE 15_2 James Nordquist.vcxproj -> I:\C++\C++2\PE 15_2 James Nordquist\Debug\PE 15_2 James Nordquist.exe
+  PE 15_2 James Nordquist.vcxproj -> I:\C++\C++2\PE 15_2 James Nordquist\Debug\PE 15_2 James Nordquist.pdb (Partial PDB)

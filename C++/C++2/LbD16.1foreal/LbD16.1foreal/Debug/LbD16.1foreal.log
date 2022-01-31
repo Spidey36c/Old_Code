@@ -1,0 +1,3 @@
+﻿C:\VS2017\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets(387,5): warning MSB8028: The intermediate directory (Debug\) contains files shared from another project (LbD16.1foreal.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+  LbD.cpp
+  LbD16.1foreal.vcxproj -> Z:\C++2\LbD16.1foreal\Debug\LbD16.6.3.exe

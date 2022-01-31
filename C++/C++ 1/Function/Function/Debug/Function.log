@@ -1,0 +1,6 @@
+﻿C:\VS2017\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets(387,5): warning MSB8028: The intermediate directory (Debug\) contains files shared from another project (Function.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+  JamesNordquistFileIO.cpp
+z:\c++ 1\function\function\jamesnordquistfileio.cpp(10): warning C4101: 'first': unreferenced local variable
+z:\c++ 1\function\function\jamesnordquistfileio.cpp(12): warning C4101: 'age': unreferenced local variable
+z:\c++ 1\function\function\jamesnordquistfileio.cpp(11): warning C4101: 'last': unreferenced local variable
+  Function.vcxproj -> Z:\C++ 1\Function\Debug\JamesNordquistFileIO.exe

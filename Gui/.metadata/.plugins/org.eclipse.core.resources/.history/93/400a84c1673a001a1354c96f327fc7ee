@@ -1,0 +1,55 @@
+package javaCalculator;
+/*
+ * Author: James Nordquist
+ * 
+ * Date: 1/18/2020
+ * 
+ * Main Display, holds the buttons and screen as wells as the
+ * listeners
+ */
+import javax.swing.JPanel;
+
+import java.awt.GridBagConstraints;
+import java.awt.GridBagLayout;
+import java.awt.LayoutManager;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javaCalculator.Number;
+import javaCalculator.Screen;
+
+public class Calculator extends JPanel 
+{
+	Screen scrn = new Screen();
+	Number num = new Number("C");
+	public Calculator()
+	{
+		LayoutManager m_layout;
+		m_layout = new GridBagLayout();   
+		setLayout(m_layout);    
+		GridBagConstraints c = new GridBagConstraints();
+
+		c.weightx = 1;
+		c.gridx = 0;
+		c.gridy = 0;
+		c.fill = GridBagConstraints.HORIZONTAL;
+		add(scrn, c);
+		
+		c.gridy = 1;
+		c.fill = GridBagConstraints.BOTH;
+		num.addActionListener(new ClearListener());
+		add(num, c);
+	}
+	
+	class ClearListener implements ActionListener
+	{
+		public ClearListener()
+		{
+			
+		}
+		public void actionPerformed(ActionEvent e) 
+		{
+			scrn.Clear(); 
+		}
+	}
+}

@@ -1,0 +1,174 @@
+﻿<ResourceDictionary
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+	<!-- Override System text highlight colors here. -->
+
+	<!-- Resource dictionary entries should be defined here. -->
+        <SolidColorBrush x:Key="PageBackgroundBrush_90Transparent" Color="#F3FFFFFF" />
+        <SolidColorBrush x:Key="PagePopupBorderBrush" Color="#FFBABABA"/>
+        <SolidColorBrush x:Key="PagePopupBackgroundBrush" Color="#FFEEF7FF"/>
+        <SolidColorBrush x:Key="PagePopupForegroundBrush" Color="#FF000000"/>
+	<SolidColorBrush x:Key="PageForegroundAccentBrush" Color="#FF596D80"/>
+	<SolidColorBrush x:Key="PageInputBackgroundBrush" Color="#FFFFFFFF"/>
+	<SolidColorBrush x:Key="PageInputGlyphBrush" Color="#FFFFFFFF"/>
+	<SolidColorBrush x:Key="PageInputForegroundBrush" Color="#FF000000"/>
+	<SolidColorBrush x:Key="PageInputBorderBrush" Color="#FFBABABA"/>
+	<SolidColorBrush x:Key="PageLinkTextBrush" Color="#FF0066CC"/>
+	<SolidColorBrush x:Key="PageLinkHoverBrush" Color="#FF2FB2FF"/>
+	<SolidColorBrush x:Key="PageToolBarGlyphBrush" Color="#FF444444"/>
+	<LinearGradientBrush x:Key="PageToolBarGradientBrush" EndPoint="0,1" StartPoint="0,0">
+		<GradientStop Color="#FFDDDDDD" Offset="0.650"/>
+		<GradientStop Color="#FFDDDDDD" Offset="0.501"/>
+		<GradientStop Color="#FFECECEC" Offset="0.500"/>
+		<GradientStop Color="#FFFFFFFF" Offset="0"/>
+		<GradientStop Color="#FFFFFFFF" Offset="1"/>
+	</LinearGradientBrush>
+	<LinearGradientBrush x:Key="PageToolBarButtonHoverBrush" EndPoint="1,0.5" StartPoint="0,0.5" SpreadMethod="Pad">
+		<GradientStop Color="#FFBABABA" Offset="0"/>
+		<GradientStop Color="#FFDDDDDD" Offset="0.750"/>
+	</LinearGradientBrush>
+	<LinearGradientBrush x:Key="PageItemSelectionGradientBrush" EndPoint="0,1" StartPoint="0,0">
+		<GradientStop Color="#FFC8E0EF" Offset="0.64"/>
+		<GradientStop Color="#FFC8DFED" Offset="0.501"/>
+		<GradientStop Color="#FFD8EEFB" Offset="0.5"/>
+		<GradientStop Color="#FFFFFFFF" Offset="0"/>
+		<GradientStop Color="#FFF4FBFF" Offset="1"/>
+	</LinearGradientBrush>
+	<LinearGradientBrush x:Key="PageItemSelectionBorderBrush" EndPoint="0.0,1" StartPoint="0.0,0">
+		<GradientStop Color="#FF92C9E9" Offset="0.3"/>
+		<GradientStop Color="#FF75AFD2" Offset="1"/>
+	</LinearGradientBrush>
+	<SolidColorBrush x:Key="PageToolTipBorderBrush" Color="#FF444444"/>
+	<LinearGradientBrush x:Key="PageToolTipGradientBrush" EndPoint="0,1" StartPoint="0,0">
+		<GradientStop Color="#FFDDDDDD" Offset="1"/>
+		<GradientStop Color="#FFDDDDDD" Offset="0.501"/>
+		<GradientStop Color="#FFECECEC" Offset="0.500"/>
+		<GradientStop Color="#FFFFFFFF" Offset="0"/>
+	</LinearGradientBrush>
+	<SolidColorBrush x:Key="PageToolTipForegroundBrush" Color="#FF000000"/>
+	<SolidColorBrush x:Key="PageButtonForegroundBrush" Color="#FFFFFFFF"/>
+	<SolidColorBrush x:Key="PageButtonForegroundDisabledBrush" Color="#FFEFEFEF"/>
+	<LinearGradientBrush x:Key="PageButtonGradientBrush" EndPoint="0,1" StartPoint="0,0">
+		<GradientStop Color="#FF71ACD2" Offset="1"/>
+		<GradientStop Color="#FF21709F" Offset="0.455"/>
+	</LinearGradientBrush>
+	<LinearGradientBrush x:Key="PageButtonGradientFocusedBrush" EndPoint="0,1" StartPoint="0,0">
+		<GradientStop Color="#FF44B2FB" Offset="1"/>
+		<GradientStop Color="#FF257EB2" Offset="0.49"/>
+	</LinearGradientBrush>
+	<LinearGradientBrush x:Key="PageButtonGradientPressedBrush" EndPoint="0,1" StartPoint="0,0">
+		<GradientStop Color="#FF62B5EB" Offset="1"/>
+		<GradientStop Color="#FF2B91CE" Offset="0.469"/>
+	</LinearGradientBrush>
+	<LinearGradientBrush x:Key="PageButtonGradientDisabledBrush" EndPoint="0,1" StartPoint="0,0">
+		<GradientStop Color="#FFDADADA" Offset="1"/>
+		<GradientStop Color="#FFA5A5A5" Offset="0.455"/>
+	</LinearGradientBrush>
+	<LinearGradientBrush x:Key="PageButtonPhongGradientBrush" EndPoint="0.5,1" StartPoint="0.5,0">
+		<GradientStop Color="#99FFFFFF" Offset="0.2"/>
+		<GradientStop Color="#4CFFFFFF" Offset="0.991"/>
+	</LinearGradientBrush>
+
+    <LinearGradientBrush x:Key="PageButtonPhongGradientDisabledBrush"
+                         EndPoint="0.5,1"
+                         StartPoint="0.5,0">
+        <GradientStop Color="#99FFFFFF"
+                      Offset="0.2" />
+        <GradientStop Color="#4CFFFFFF"
+                      Offset="0.991" />
+    </LinearGradientBrush>
+
+    <LinearGradientBrush x:Key="PageButtonPhongGradientPressedBrush"
+                         EndPoint="0.5,1"
+                         StartPoint="0.5,0">
+        <GradientStop Color="#99FFFFFF"
+                      Offset="0.2" />
+        <GradientStop Color="#4CFFFFFF"
+                      Offset="0.991" />
+    </LinearGradientBrush>
+    
+    <LinearGradientBrush x:Key="PageButtonPhongBorderBrush" EndPoint="0.5,1" StartPoint="0.5,0">
+		<GradientStop Color="#FFFFFFFF" Offset="0"/>
+		<GradientStop Color="#00FFFFFF" Offset="1"/>
+	</LinearGradientBrush>
+	<OuterGlowBitmapEffect x:Key="PageButtonFocusedBitmapEffect" GlowColor="#FF45AAE5" GlowSize="4" Opacity="1" Noise="0"/>
+	<DropShadowBitmapEffect x:Key="PageButtonContentShadowEffect" Noise="0" Opacity="0.4" ShadowDepth="1" Softness="0"/>
+    <SolidColorBrush x:Key="PageButtonBorderBrush"
+                     Color="Transparent" />
+    
+    <SolidColorBrush x:Key="PageActivityModalMessageProblemTextBrush"
+                     Color="DarkBlue" />
+
+    <SolidColorBrush x:Key="PageActivityModalMessageButtonBackgroundBrush"
+                     Color="#FFD4D0C8"/>
+
+    <SolidColorBrush x:Key="PageActivityModalBackgroundOverlayBrush"
+                     Color="#6400002A" />
+    
+    <Color x:Key="PageActivityModalDropShadowColor">#FF000000</Color>
+  
+  <SolidColorBrush x:Key="PageTreeViewItemArrowStroke"
+                   Color="#FF989898" />
+  <SolidColorBrush x:Key="PageTreeViewItemArrowFill"
+                   Color="Transparent" />
+  <SolidColorBrush x:Key="PageTreeViewItemArrowHoverStroke"
+                    Color="#FF1BBBFA" />
+  <SolidColorBrush x:Key="PageTreeViewItemArrowHoverFill"
+                   Color="Transparent" />
+  <SolidColorBrush x:Key="PageTreeViewItemArrowCollapsedStroke"
+                   Color="#FF262626" />
+  <SolidColorBrush x:Key="PageTreeViewItemArrowCollapsedFill"
+                   Color="#FF595959" />
+
+  <SolidColorBrush x:Key="PageGroupBoxBorderBrush"
+                   Color="#D5DFE5" />
+  <SolidColorBrush x:Key="PageInlineErrorBackground"
+                   Color="#FFFEFECA" />
+  <SolidColorBrush x:Key="RequiredFieldNotCompleteBackground"
+                   Color="{DynamicResource {x:Static SystemColors.InfoColorKey}}" />
+  <SolidColorBrush x:Key="InfoBackgroundBrush"
+                   Color="{DynamicResource {x:Static SystemColors.InfoColorKey}}" />
+    <SolidColorBrush x:Key="InfoTextBrush"
+                   Color="{DynamicResource {x:Static SystemColors.InfoTextColorKey}}" />
+
+    <!-- Tab Control -->
+  
+  <SolidColorBrush x:Key="PageTabControl_DisabledForegroundBrush"
+                   Color="#FF888888" />
+  <SolidColorBrush x:Key="PageTabControl_DisabledBackgroundBrush"
+                   Color="#FFEEEEEE" />
+  <SolidColorBrush x:Key="PageTabControl_SelectedBackgroundBrush"
+                   Color="#FFFFFFFF" />
+  <SolidColorBrush x:Key="PageTabControl_DisabledBorderBrush"
+                   Color="#FFAAAAAA" />
+  <SolidColorBrush x:Key="PageTabControl_SolidBorderBrush"
+                   Color="#FF888888" />
+
+
+  <LinearGradientBrush x:Key="PageTabItem_BackgroundBrush"
+                       EndPoint="0,1"
+                       StartPoint="0,0">
+    <GradientStop Color="#FFFFFFFF"
+                  Offset="0" />
+    <GradientStop Color="#FFD9D5D5"
+                  Offset="1" />
+    <GradientStop Color="#FFD3D3D3"
+                  Offset="0.442" />
+    <GradientStop Color="#FFC3C3C3"
+                  Offset="0.591" />
+  </LinearGradientBrush>
+
+  <!-- DropDownPopupButton -->
+  <SolidColorBrush x:Key="PageDropDownPopupButtonHoverBackgroundBrush"
+                   Color="#C2E0FF"/>
+
+  <SolidColorBrush x:Key="PageDropDownPopupButtonHoverBorderBrush"
+                   Color="#3399FF"/>
+  <SolidColorBrush x:Key="PageDropDownPopupButtonCheckedBackgroundBrush"
+                   Color="#E6F0FA"/>
+  <SolidColorBrush x:Key="PageDropDownPopupButtonPressedBackgroundBrush"
+                   Color="#99CCFF"/>
+  <SolidColorBrush x:Key="PageDropDownPopupButtonPressedBorderBrush"
+                   Color="#3399FF"/>
+  
+</ResourceDictionary>

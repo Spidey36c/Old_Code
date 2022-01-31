@@ -1,0 +1,66 @@
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="Departure Location" />
+    <EditText
+        android:inputType="text"
+        android:layout_width="366.5dp"
+        android:layout_height="49.0dp"
+        android:id="@+id/DepartLocation"
+        android:layout_marginBottom="66.5dp" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="Arrival Location" />
+    <EditText
+        android:inputType="text"
+        android:layout_width="366.5dp"
+        android:layout_height="49.0dp"
+        android:id="@+id/ArriveLocation"
+        android:layout_marginBottom="66.5dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="Daparture Date" />
+    <EditText
+        android:inputType="datetime"
+        android:layout_width="366.5dp"
+        android:layout_height="49.0dp"
+        android:id="@+id/Departuredate"
+        android:layout_marginBottom="66.5dp" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="Arrival Date" />
+    <EditText
+        android:inputType="datetime"
+        android:layout_width="366.5dp"
+        android:layout_height="49.0dp"
+        android:id="@+id/ArriveDate"
+        android:layout_marginBottom="66.5dp" />
+    <Button
+        android:text="Submit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/Submit" />
+
+    <Button
+        android:text="Cancel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/Cancel" />
+</LinearLayout>

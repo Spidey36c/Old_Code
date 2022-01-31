@@ -1,0 +1,22 @@
+﻿  potion.cpp
+z:\oop\james_nordquist_lab1\james_nordquist_lab1\potion.cpp(51): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17134.0\ucrt\string.h(133): note: see declaration of 'strcpy'
+z:\oop\james_nordquist_lab1\james_nordquist_lab1\potion.cpp(53): warning C4996: 'strtok': This function or variable may be unsafe. Consider using strtok_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17134.0\ucrt\string.h(440): note: see declaration of 'strtok'
+z:\oop\james_nordquist_lab1\james_nordquist_lab1\potion.cpp(54): warning C4996: 'strtok': This function or variable may be unsafe. Consider using strtok_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17134.0\ucrt\string.h(440): note: see declaration of 'strtok'
+z:\oop\james_nordquist_lab1\james_nordquist_lab1\potion.cpp(55): warning C4996: 'strtok': This function or variable may be unsafe. Consider using strtok_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17134.0\ucrt\string.h(440): note: see declaration of 'strtok'
+z:\oop\james_nordquist_lab1\james_nordquist_lab1\potion.cpp(56): warning C4996: 'strtok': This function or variable may be unsafe. Consider using strtok_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17134.0\ucrt\string.h(440): note: see declaration of 'strtok'
+z:\oop\james_nordquist_lab1\james_nordquist_lab1\potion.cpp(82): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17134.0\ucrt\string.h(133): note: see declaration of 'strcpy'
+z:\oop\james_nordquist_lab1\james_nordquist_lab1\potion.cpp(83): warning C4996: 'strtok': This function or variable may be unsafe. Consider using strtok_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17134.0\ucrt\string.h(440): note: see declaration of 'strtok'
+z:\oop\james_nordquist_lab1\james_nordquist_lab1\potion.cpp(84): warning C4996: 'strtok': This function or variable may be unsafe. Consider using strtok_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17134.0\ucrt\string.h(440): note: see declaration of 'strtok'
+z:\oop\james_nordquist_lab1\james_nordquist_lab1\potion.cpp(85): warning C4996: 'strtok': This function or variable may be unsafe. Consider using strtok_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17134.0\ucrt\string.h(440): note: see declaration of 'strtok'
+z:\oop\james_nordquist_lab1\james_nordquist_lab1\potion.cpp(86): warning C4996: 'strtok': This function or variable may be unsafe. Consider using strtok_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17134.0\ucrt\string.h(440): note: see declaration of 'strtok'
+  James_nordquist_lab1.vcxproj -> Z:\OOP\James_nordquist_lab1\Debug\James_nordquist_lab1.exe

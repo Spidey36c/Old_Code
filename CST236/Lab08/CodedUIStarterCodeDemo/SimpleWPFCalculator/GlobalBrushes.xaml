@@ -1,0 +1,49 @@
+﻿<ResourceDictionary
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+	<!-- Resource dictionary entries should be defined here. -->
+	<SolidColorBrush x:Key="ColorWhiteBrush" Color="White"/>
+
+	<SolidColorBrush x:Key="ColorInvisibleBrush" Color="Transparent"/>
+	<SolidColorBrush x:Key="ColorBlackBrush" Color="Black"/>
+
+	<!-- Disabled Brushes are used for the Disabled look of each control -->
+	<SolidColorBrush x:Key="ForegroundDisabledBrush" Color="#FF888888"/>
+	<LinearGradientBrush x:Key="ItemSelectionHoverBrush" EndPoint="0.0,1" StartPoint="0.0,0">
+		<GradientStop Color="#FF6FABCF" Offset="0.3"/>
+		<GradientStop Color="#FF315973" Offset="1"/>
+	</LinearGradientBrush>
+	<SolidColorBrush x:Key="ItemSelectionPrimaryBrush" Color="#FF5088AA"/>
+	<SolidColorBrush x:Key="ScrollBarThumbBrush" Color="#FF888888"/>	
+	<SolidColorBrush x:Key="ScrollBarTrackBrush" Color="#FFDDDDDD"/>
+	<SolidColorBrush x:Key="ScrollBarArrowBrush" Color="#FF444547"/>
+
+    <SolidColorBrush x:Key="WindowControlButtonBrush"
+                     Color="Transparent" />
+    <SolidColorBrush x:Key="WindowControlButtonStrokeBrush"
+                     Color="#FF363636" />
+    <LinearGradientBrush x:Key="WindowControlButtonHighlightBrush"
+                         EndPoint="0.0,1"
+                         StartPoint="0.0,0">
+        <GradientStop Color="#CCADADAD"
+                      Offset="0.075" />
+        <GradientStop Color="#6E5D5D5D"
+                      Offset="0.499" />
+        <GradientStop Color="Transparent"
+                      Offset="0.500" />
+        <GradientStop Color="#3F7C7C7C"
+                      Offset="0.975" />
+    </LinearGradientBrush>
+    <LinearGradientBrush x:Key="WindowControlButtonPressedBrush"
+                         EndPoint="0.0,1"
+                         StartPoint="0.0,0">
+        <GradientStop Color="#7FABABAB"
+                      Offset="0.075" />
+        <GradientStop Color="#6E5D5D5D"
+                      Offset="0.499" />
+        <GradientStop Color="Transparent"
+                      Offset="0.500" />
+        <GradientStop Color="#3F666666"
+                      Offset="0.935" />
+    </LinearGradientBrush>
+</ResourceDictionary>

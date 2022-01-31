@@ -1,0 +1,2 @@
+Only changes are needed to recipe.txt, but you must place the actual ingredient inside the <> if you do not the program will not work correctly.
+You do not need to change pantry.txt as any changes can be made inside the program, but if you want you can.

@@ -1,0 +1,5 @@
+D:\CST236\Lab08\CodedUIStarterCodeDemo\WinformCodedUITest\bin\Debug\WinformCodedUITest.dll
+D:\CST236\Lab08\CodedUIStarterCodeDemo\WinformCodedUITest\bin\Debug\WinformCodedUITest.pdb
+D:\CST236\Lab08\CodedUIStarterCodeDemo\WinformCodedUITest\obj\Debug\WinformCodedUITest.csproj.CoreCompileInputs.cache
+D:\CST236\Lab08\CodedUIStarterCodeDemo\WinformCodedUITest\obj\Debug\WinformCodedUITest.dll
+D:\CST236\Lab08\CodedUIStarterCodeDemo\WinformCodedUITest\obj\Debug\WinformCodedUITest.pdb

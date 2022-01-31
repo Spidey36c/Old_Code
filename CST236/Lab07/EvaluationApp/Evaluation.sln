@@ -1,0 +1,100 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.489
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "sql", "sql", "{283FF61D-564C-497E-9238-390EA93CF9EC}"
+	ProjectSection(SolutionItems) = preProject
+		sql\Evaluation.sql = sql\Evaluation.sql
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{5B7A98F9-FDE5-4447-A663-14728A532A25}"
+	ProjectSection(SolutionItems) = preProject
+		Local.testsettings = Local.testsettings
+	EndProjectSection
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Evaluation", "Evaluation", "{E7718819-37FB-46A3-8915-B987D15D96D2}"
+	ProjectSection(WebsiteProperties) = preProject
+		SccProjectName = "SAK"
+		SccAuxPath = "SAK"
+		SccLocalPath = "SAK"
+		SccProvider = "SAK"
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		Debug.AspNetCompiler.VirtualPath = "/Evaluation"
+		Debug.AspNetCompiler.PhysicalPath = "Evaluation\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\Evaluation\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/Evaluation"
+		Release.AspNetCompiler.PhysicalPath = "Evaluation\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\Evaluation\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "51792"
+		VWDDynamicPort = "false"
+		SlnRelativePath = "Evaluation\"
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Web Performance and Load Test Project", "Web Performance and Load Test Project\Web Performance and Load Test Project.csproj", "{ED32B7C0-F8D6-4F3B-8E9F-6F9539A83851}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|.NET = Debug|.NET
+		Debug|Any CPU = Debug|Any CPU
+		Debug|Mixed Platforms = Debug|Mixed Platforms
+		Release|.NET = Release|.NET
+		Release|Any CPU = Release|Any CPU
+		Release|Mixed Platforms = Release|Mixed Platforms
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E7718819-37FB-46A3-8915-B987D15D96D2}.Debug|.NET.ActiveCfg = Debug|Any CPU
+		{E7718819-37FB-46A3-8915-B987D15D96D2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E7718819-37FB-46A3-8915-B987D15D96D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E7718819-37FB-46A3-8915-B987D15D96D2}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{E7718819-37FB-46A3-8915-B987D15D96D2}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{E7718819-37FB-46A3-8915-B987D15D96D2}.Release|.NET.ActiveCfg = Debug|Any CPU
+		{E7718819-37FB-46A3-8915-B987D15D96D2}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{E7718819-37FB-46A3-8915-B987D15D96D2}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{E7718819-37FB-46A3-8915-B987D15D96D2}.Release|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{E7718819-37FB-46A3-8915-B987D15D96D2}.Release|Mixed Platforms.Build.0 = Debug|Any CPU
+		{ED32B7C0-F8D6-4F3B-8E9F-6F9539A83851}.Debug|.NET.ActiveCfg = Debug|Any CPU
+		{ED32B7C0-F8D6-4F3B-8E9F-6F9539A83851}.Debug|.NET.Build.0 = Debug|Any CPU
+		{ED32B7C0-F8D6-4F3B-8E9F-6F9539A83851}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ED32B7C0-F8D6-4F3B-8E9F-6F9539A83851}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ED32B7C0-F8D6-4F3B-8E9F-6F9539A83851}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{ED32B7C0-F8D6-4F3B-8E9F-6F9539A83851}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{ED32B7C0-F8D6-4F3B-8E9F-6F9539A83851}.Release|.NET.ActiveCfg = Release|Any CPU
+		{ED32B7C0-F8D6-4F3B-8E9F-6F9539A83851}.Release|.NET.Build.0 = Release|Any CPU
+		{ED32B7C0-F8D6-4F3B-8E9F-6F9539A83851}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ED32B7C0-F8D6-4F3B-8E9F-6F9539A83851}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ED32B7C0-F8D6-4F3B-8E9F-6F9539A83851}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{ED32B7C0-F8D6-4F3B-8E9F-6F9539A83851}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5C28FA6F-5769-4E0B-9E8E-A59E3122BFB1}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 3
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://tfs.cset.oit.edu/cst236testing
+		SccLocalPath0 = .
+		SccWebProject1 = true
+		SccProjectUniqueName1 = Evaluation
+		SccProjectName1 = Evaluation
+		SccLocalPath1 = Evaluation
+		SccProjectEnlistmentChoice1 = 2
+		SccProjectUniqueName2 = Web\u0020Performance\u0020and\u0020Load\u0020Test\u0020Project\\Web\u0020Performance\u0020and\u0020Load\u0020Test\u0020Project.csproj
+		SccProjectName2 = Web\u0020Performance\u0020and\u0020Load\u0020Test\u0020Project
+		SccLocalPath2 = Web\u0020Performance\u0020and\u0020Load\u0020Test\u0020Project
+	EndGlobalSection
+	GlobalSection(TestCaseManagementSettings) = postSolution
+		CategoryFile = Evaluation.vsmdi
+	EndGlobalSection
+EndGlobal

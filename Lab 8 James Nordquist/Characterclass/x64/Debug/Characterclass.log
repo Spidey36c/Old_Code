@@ -1,0 +1,4 @@
+﻿  stub.cpp
+c:\users\james.nordquist\desktop\lab 8 james nordquist\characterclass\stub.cpp(40): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+  Characterclass.vcxproj -> C:\Users\James.nordquist\Desktop\Lab 8 James Nordquist\x64\Debug\Lab 8 James Nordquist.exe
+  Characterclass.vcxproj -> C:\Users\James.nordquist\Desktop\Lab 8 James Nordquist\x64\Debug\Lab 8 James Nordquist.pdb (Partial PDB)

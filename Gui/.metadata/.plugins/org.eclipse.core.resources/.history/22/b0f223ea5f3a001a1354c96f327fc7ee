@@ -1,0 +1,17 @@
+package javaCalculator;
+
+import javax.swing.JButton;
+
+public class Number extends JButton 
+{
+	String value;
+	public Number(String nvalue)
+	{
+		value = nvalue;
+	}
+
+	public String GetValue()
+	{
+		return value;
+	}
+}

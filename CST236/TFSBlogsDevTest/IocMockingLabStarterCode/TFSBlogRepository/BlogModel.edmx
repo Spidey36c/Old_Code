@@ -1,0 +1,338 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="TFSBlogModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityContainer Name="TFSBlogModelStoreContainer">
+          <EntitySet Name="Blogs" EntityType="TFSBlogModel.Store.Blogs" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="Comments" EntityType="TFSBlogModel.Store.Comments" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="Post" EntityType="TFSBlogModel.Store.Post" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="Users" EntityType="TFSBlogModel.Store.Users" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <AssociationSet Name="FK_Blogs_Users" Association="TFSBlogModel.Store.FK_Blogs_Users">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="Blogs" EntitySet="Blogs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Comments_Post" Association="TFSBlogModel.Store.FK_Comments_Post">
+            <End Role="Post" EntitySet="Post" />
+            <End Role="Comments" EntitySet="Comments" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Post_Blogs" Association="TFSBlogModel.Store.FK_Post_Blogs">
+            <End Role="Blogs" EntitySet="Blogs" />
+            <End Role="Post" EntitySet="Post" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Users_Blogs" Association="TFSBlogModel.Store.FK_Users_Blogs">
+            <End Role="Blogs" EntitySet="Blogs" />
+            <End Role="Users" EntitySet="Users" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Blogs">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="150" />
+          <Property Name="SubTitle" Type="nvarchar" Nullable="false" MaxLength="150" />
+          <Property Name="UserId" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Comments">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="PostId" Type="int" Nullable="false" />
+          <Property Name="Value" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="150" />
+          <Property Name="EMail" Type="nvarchar" MaxLength="150" />
+          <Property Name="DateCommented" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Post">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="BlogId" Type="int" Nullable="false" />
+          <Property Name="Title" Type="nvarchar" Nullable="false" MaxLength="150" />
+          <Property Name="Value" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="DatePosted" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Users">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="BlogId" Type="int" />
+          <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="EMail" Type="nvarchar" Nullable="false" MaxLength="150" />
+          <Property Name="Salt" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="HashedPassword" Type="nvarchar" Nullable="false" MaxLength="150" />
+        </EntityType>
+        <Association Name="FK_Blogs_Users">
+          <End Role="Users" Type="TFSBlogModel.Store.Users" Multiplicity="1" />
+          <End Role="Blogs" Type="TFSBlogModel.Store.Blogs" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Blogs">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Comments_Post">
+          <End Role="Post" Type="TFSBlogModel.Store.Post" Multiplicity="1" />
+          <End Role="Comments" Type="TFSBlogModel.Store.Comments" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Post">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Comments">
+              <PropertyRef Name="PostId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Post_Blogs">
+          <End Role="Blogs" Type="TFSBlogModel.Store.Blogs" Multiplicity="1" />
+          <End Role="Post" Type="TFSBlogModel.Store.Post" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Blogs">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Post">
+              <PropertyRef Name="BlogId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Users_Blogs">
+          <End Role="Blogs" Type="TFSBlogModel.Store.Blogs" Multiplicity="0..1" />
+          <End Role="Users" Type="TFSBlogModel.Store.Users" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Blogs">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Users">
+              <PropertyRef Name="BlogId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="TFSBlogModel" Alias="Self" xmlns="http://schemas.microsoft.com/ado/2009/11/edm" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation">
+        <EntityContainer Name="TFSBlogEntities" annotation:LazyLoadingEnabled="true" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation">
+          <EntitySet Name="Blogs" EntityType="TFSBlogModel.Blog" />
+          <EntitySet Name="Comments" EntityType="TFSBlogModel.Comment" />
+          <EntitySet Name="Posts" EntityType="TFSBlogModel.Post" />
+          <EntitySet Name="Users" EntityType="TFSBlogModel.User" />
+          <AssociationSet Name="FK_Blogs_Users" Association="TFSBlogModel.FK_Blogs_Users">
+            <End EntitySet="Users" Role="User" />
+            <End EntitySet="Blogs" Role="Blog" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Post_Blogs" Association="TFSBlogModel.FK_Post_Blogs">
+            <End Role="Blog" EntitySet="Blogs" />
+            <End Role="Post" EntitySet="Posts" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Users_Blogs" Association="TFSBlogModel.FK_Users_Blogs">
+            <End EntitySet="Blogs" Role="Blog" />
+            <End EntitySet="Users" Role="User" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Comments_Post" Association="TFSBlogModel.FK_Comments_Post">
+            <End Role="Post" EntitySet="Posts" />
+            <End Role="Comment" EntitySet="Comments" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Blog">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+          <Property Type="String" Name="Name" Nullable="false" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="SubTitle" Nullable="false" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="UserId" Nullable="false" />
+          <NavigationProperty Name="User" Relationship="TFSBlogModel.FK_Blogs_Users" FromRole="Blog" ToRole="User" />
+          <NavigationProperty Name="Posts" Relationship="TFSBlogModel.FK_Post_Blogs" FromRole="Blog" ToRole="Post" />
+          <NavigationProperty Name="Users" Relationship="TFSBlogModel.FK_Users_Blogs" FromRole="Blog" ToRole="User" />
+        </EntityType>
+        <EntityType Name="Comment">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+          <Property Type="Int32" Name="PostId" Nullable="false" />
+          <Property Type="String" Name="Value" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Name" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="EMail" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="DateCommented" Nullable="false" />
+          <NavigationProperty Name="Post" Relationship="TFSBlogModel.FK_Comments_Post" FromRole="Comment" ToRole="Post" />
+        </EntityType>
+        <EntityType Name="Post">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+          <Property Type="Int32" Name="BlogId" Nullable="false" />
+          <Property Type="String" Name="Title" Nullable="false" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Value" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="DatePosted" Nullable="false" />
+          <NavigationProperty Name="Blog" Relationship="TFSBlogModel.FK_Post_Blogs" FromRole="Post" ToRole="Blog" />
+          <NavigationProperty Name="Comments" Relationship="TFSBlogModel.FK_Comments_Post" FromRole="Post" ToRole="Comment" />
+        </EntityType>
+        <EntityType Name="User">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+          <Property Type="Int32" Name="BlogId" />
+          <Property Type="String" Name="Name" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Salt" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="HashedPassword" Nullable="false" MaxLength="150" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Blogs" Relationship="TFSBlogModel.FK_Blogs_Users" FromRole="User" ToRole="Blog" />
+          <NavigationProperty Name="Blog" Relationship="TFSBlogModel.FK_Users_Blogs" FromRole="User" ToRole="Blog" />
+          <Property Type="String" Name="EMail" Nullable="false" MaxLength="150" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <Association Name="FK_Blogs_Users">
+          <End Type="TFSBlogModel.User" Multiplicity="1" Role="User" />
+          <End Type="TFSBlogModel.Blog" Multiplicity="*" Role="Blog" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Blog">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Post_Blogs">
+          <End Type="TFSBlogModel.Blog" Role="Blog" Multiplicity="1" />
+          <End Type="TFSBlogModel.Post" Role="Post" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Blog">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Post">
+              <PropertyRef Name="BlogId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Users_Blogs">
+          <End Type="TFSBlogModel.Blog" Multiplicity="0..1" Role="Blog" />
+          <End Type="TFSBlogModel.User" Multiplicity="*" Role="User" />
+          <ReferentialConstraint>
+            <Principal Role="Blog">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="User">
+              <PropertyRef Name="BlogId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Comments_Post">
+          <End Type="TFSBlogModel.Post" Role="Post" Multiplicity="1" />
+          <End Type="TFSBlogModel.Comment" Role="Comment" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Post">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Comment">
+              <PropertyRef Name="PostId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="TFSBlogModelStoreContainer" CdmEntityContainer="TFSBlogEntities">
+          <EntitySetMapping Name="Blogs">
+            <EntityTypeMapping TypeName="TFSBlogModel.Blog">
+              <MappingFragment StoreEntitySet="Blogs">
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="SubTitle" ColumnName="SubTitle" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Comments">
+            <EntityTypeMapping TypeName="TFSBlogModel.Comment">
+              <MappingFragment StoreEntitySet="Comments">
+                <ScalarProperty Name="DateCommented" ColumnName="DateCommented" />
+                <ScalarProperty Name="EMail" ColumnName="EMail" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Value" ColumnName="Value" />
+                <ScalarProperty Name="PostId" ColumnName="PostId" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Posts">
+            <EntityTypeMapping TypeName="TFSBlogModel.Post">
+              <MappingFragment StoreEntitySet="Post">
+                <ScalarProperty Name="DatePosted" ColumnName="DatePosted" />
+                <ScalarProperty Name="Value" ColumnName="Value" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="BlogId" ColumnName="BlogId" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Users">
+            <EntityTypeMapping TypeName="TFSBlogModel.User">
+              <MappingFragment StoreEntitySet="Users">
+                <ScalarProperty Name="EMail" ColumnName="EMail" />
+                <ScalarProperty Name="HashedPassword" ColumnName="HashedPassword" />
+                <ScalarProperty Name="Salt" ColumnName="Salt" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="BlogId" ColumnName="BlogId" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="BlogModel">
+        <EntityTypeShape EntityType="TFSBlogModel.Blog" Width="1.5" PointX="0.75" PointY="2.5" Height="2.085348307291667" />
+        <EntityTypeShape EntityType="TFSBlogModel.Comment" Width="1.5" PointX="5.25" PointY="1.125" Height="2.0853483072916674" />
+        <EntityTypeShape EntityType="TFSBlogModel.Post" Width="1.5" PointX="3" PointY="1.125" Height="2.0853483072916674" />
+        <EntityTypeShape EntityType="TFSBlogModel.User" Width="1.5" PointX="5" PointY="3.75" Height="2.0853483072916674" />
+        <AssociationConnector Association="TFSBlogModel.FK_Blogs_Users" ManuallyRouted="false">
+          <ConnectorPoint PointX="5" PointY="4.14800048828125" />
+          <ConnectorPoint PointX="2.25" PointY="4.14800048828125" />
+        </AssociationConnector>
+        <AssociationConnector Association="TFSBlogModel.FK_Post_Blogs">
+          <ConnectorPoint PointX="2.25" PointY="2.8551741536458337" />
+          <ConnectorPoint PointX="3" PointY="2.8551741536458337" />
+        </AssociationConnector>
+        <AssociationConnector Association="TFSBlogModel.FK_Users_Blogs">
+          <ConnectorPoint PointX="2.25" PointY="4.4291743977864577" />
+          <ConnectorPoint PointX="5" PointY="4.4291743977864577" />
+        </AssociationConnector>
+        <AssociationConnector Association="TFSBlogModel.FK_Comments_Post">
+          <ConnectorPoint PointX="4.5" PointY="2.1676741536458337" />
+          <ConnectorPoint PointX="5.25" PointY="2.1676741536458337" />
+        </AssociationConnector>
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>

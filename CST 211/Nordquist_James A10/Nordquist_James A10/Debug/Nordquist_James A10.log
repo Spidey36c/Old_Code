@@ -1,0 +1,4 @@
+﻿  stub.cpp
+d:\cst 211\nordquist_james a10\nordquist_james a10\stub.cpp(21): warning C4101: 'tests_passed': unreferenced local variable
+stub.obj : error LNK2001: unresolved external symbol "bool __cdecl Test_ForwardIter(void)" (?Test_ForwardIter@@YA_NXZ)
+D:\CST 211\Nordquist_James A10\Debug\Nordquist_James A10.exe : fatal error LNK1120: 1 unresolved externals

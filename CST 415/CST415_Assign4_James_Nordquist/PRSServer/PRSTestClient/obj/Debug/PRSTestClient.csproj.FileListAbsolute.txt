@@ -1,0 +1,10 @@
+D:\CST 415\James Nordquist CST 415 - Assignment 1 Handout v1.3\PRSServer\PRSTestClient\bin\Debug\PRSTestClient.exe.config
+D:\CST 415\James Nordquist CST 415 - Assignment 1 Handout v1.3\PRSServer\PRSTestClient\bin\Debug\PRSTestClient.exe
+D:\CST 415\James Nordquist CST 415 - Assignment 1 Handout v1.3\PRSServer\PRSTestClient\bin\Debug\PRSTestClient.pdb
+D:\CST 415\James Nordquist CST 415 - Assignment 1 Handout v1.3\PRSServer\PRSTestClient\bin\Debug\PRSLib.dll
+D:\CST 415\James Nordquist CST 415 - Assignment 1 Handout v1.3\PRSServer\PRSTestClient\bin\Debug\PRSLib.pdb
+D:\CST 415\James Nordquist CST 415 - Assignment 1 Handout v1.3\PRSServer\PRSTestClient\obj\Debug\PRSTestClient.csproj.AssemblyReference.cache
+D:\CST 415\James Nordquist CST 415 - Assignment 1 Handout v1.3\PRSServer\PRSTestClient\obj\Debug\PRSTestClient.csproj.CoreCompileInputs.cache
+D:\CST 415\James Nordquist CST 415 - Assignment 1 Handout v1.3\PRSServer\PRSTestClient\obj\Debug\PRSTestClient.csproj.CopyComplete
+D:\CST 415\James Nordquist CST 415 - Assignment 1 Handout v1.3\PRSServer\PRSTestClient\obj\Debug\PRSTestClient.exe
+D:\CST 415\James Nordquist CST 415 - Assignment 1 Handout v1.3\PRSServer\PRSTestClient\obj\Debug\PRSTestClient.pdb

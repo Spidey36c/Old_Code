@@ -1,0 +1,812 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:WpfControls="clr-namespace:Microsoft.TeamFoundation.TestManagement.Client.WpfControls;assembly=Microsoft.TeamFoundation.TestManagement.Client.WpfControls"
+                    xmlns:WpfControlsUtility="clr-namespace:Microsoft.TeamFoundation.TestManagement.Client.WpfControls.Utility;assembly=Microsoft.TeamFoundation.TestManagement.Client.WpfControls">
+    <!-- Resource dictionary entries should be defined here. -->
+    <Style x:Key="ShellButtonFocusVisualStyle">
+        <Setter Property="Control.Template">
+            <Setter.Value>
+                <ControlTemplate>
+                    <Rectangle SnapsToDevicePixels="true"
+                               Stroke="{DynamicResource ShellFocusVisualStyleBrush}"
+                               StrokeDashArray="1 2"
+                               StrokeThickness="1"
+                               Margin="3" />
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="FrameworkElement.OverridesDefaultStyle"
+                Value="True" />
+    </Style>
+
+    <Style x:Key="ShellActionButtonFocusVisualStyle">
+        <Setter Property="Control.Template">
+            <Setter.Value>
+                <ControlTemplate>
+                    <Rectangle SnapsToDevicePixels="true"
+                               Stroke="{DynamicResource ShellFocusVisualStyleBrush}"
+                               StrokeDashArray="1 2"
+                               StrokeThickness="1"
+                               Margin="-2" />
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="FrameworkElement.OverridesDefaultStyle"
+                Value="True" />
+    </Style>
+
+    <!-- Simple Button - This control sets brushes on each state. Note that these brushes must be listed above since they are static resources -->
+    <Style x:Key="ShellClientCloseButtonStyle"
+           TargetType="{x:Type Button}"
+           BasedOn="{x:Null}">
+        <Setter Property="FocusVisualStyle"
+                Value="{DynamicResource ShellButtonFocusVisualStyle}" />
+        <Setter Property="Background"
+                Value="{DynamicResource ColorInvisibleBrush}" />
+        <Setter Property="BorderBrush"
+                Value="{DynamicResource ColorInvisibleBrush}" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+
+                    <!-- We use Grid as a root because it is easy to add more elements to customize the button -->
+                    <Grid x:Name="Grid">
+                        <Border x:Name="Border"
+                                Background="{DynamicResource ShellCloseButtonBrush}"
+                                BorderBrush="{DynamicResource ColorBlackBrush}"
+                                BorderThickness="0,0,0,0"
+                                Padding="{TemplateBinding Padding}"
+                                Focusable="False"
+                                CornerRadius="1.5,1.5,1.5,1.5">
+                            <Path x:Name="Path"
+                                  Stretch="Fill"
+                                  StrokeLineJoin="Round"
+                                  Stroke="{x:Null}"
+                                  Fill="{DynamicResource ColorWhiteBrush}"
+                                  Data="F1 M 1008.46,86.1669L 1011.71,82.9119L 1013.34,84.5369L 1010.09,87.7919L 1013.34,91.0469L 1011.71,92.6719L 1008.46,89.4169L 1005.21,92.6719L 1003.58,91.0469L 1006.83,87.7919L 1003.58,84.5369L 1005.21,82.9119L 1008.46,86.1669 Z "
+                                  Width="10.76"
+                                  Height="10.76"
+                                  SnapsToDevicePixels="False"
+                                  HorizontalAlignment="Center"
+                                  VerticalAlignment="Center" />
+                        </Border>
+
+                        <!-- Content Presenter is where the text content etc is placed by the control -->
+                    </Grid>
+
+                    <!--Each state sets a brush on the Border in the template -->
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsKeyboardFocused"
+                                 Value="true">
+                            <Setter Property="Background"
+                                    TargetName="Border"
+                                    Value="{DynamicResource ShellCloseButtonBrush}" />
+                            <Setter Property="BorderBrush"
+                                    TargetName="Border"
+                                    Value="{DynamicResource ShellForegroundBrush}" />
+                        </Trigger>
+                        <Trigger Property="IsMouseOver"
+                                 Value="true">
+                            <Setter Property="Fill"
+                                    TargetName="Path"
+                                    Value="{DynamicResource ShellCloseButtonPathHighlightBrush}" />
+                            <Setter Property="Background"
+                                    TargetName="Border"
+                                    Value="{DynamicResource ShellCloseButtonHighlightBrush}" />
+                            <Setter Property="BorderBrush"
+                                    TargetName="Border"
+                                    Value="{DynamicResource ColorWhiteBrush}" />
+                        </Trigger>
+                        <Trigger Property="IsPressed"
+                                 Value="true">
+                            <Setter Property="Fill"
+                                    TargetName="Path"
+                                    Value="{DynamicResource ShellCloseButtonPathHighlightBrush}" />
+                            <Setter Property="Background"
+                                    TargetName="Border"
+                                    Value="{DynamicResource ShellCloseButtonBrush}" />
+                            <Setter Property="BorderThickness"
+                                    TargetName="Border"
+                                    Value="1,1,1,1" />
+                            <Setter Property="BorderBrush"
+                                    TargetName="Border"
+                                    Value="{DynamicResource ShellBackgroundBrush}" />
+                        </Trigger>
+                        <Trigger Property="IsEnabled"
+                                 Value="false">
+                            <Setter Property="Foreground"
+                                    Value="{DynamicResource ForegroundDisabledBrush}" />
+                            <Setter Property="Background"
+                                    TargetName="Border"
+                                    Value="{DynamicResource ShellInputBackgroundBrush}" />
+                            <Setter Property="Fill"
+                                    TargetName="Path"
+                                    Value="{DynamicResource ForegroundDisabledBrush}" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="OverridesDefaultStyle"
+                Value="True" />
+        <Setter Property="VerticalAlignment"
+                Value="Center" />
+        <Setter Property="HorizontalAlignment"
+                Value="Right" />
+        <Setter Property="VerticalContentAlignment"
+                Value="Center" />
+        <Setter Property="HorizontalContentAlignment"
+                Value="Center" />
+        <Setter Property="Padding"
+                Value="1" />
+        <Setter Property="Width"
+                Value="20" />
+        <Setter Property="Height"
+                Value="20" />
+        <Setter Property="Margin"
+                Value="2" />
+    </Style>
+
+    <!-- Simple Button - This control sets brushes on each state. Note that these brushes must be listed above since they are static resources -->
+    <Style x:Key="ShellHelpButtonStyle"
+           TargetType="{x:Type Button}"
+           BasedOn="{x:Null}">
+        <Setter Property="FocusVisualStyle"
+                Value="{DynamicResource ShellButtonFocusVisualStyle}" />
+        <Setter Property="Background"
+                Value="{DynamicResource ColorInvisibleBrush}" />
+        <Setter Property="BorderBrush"
+                Value="{DynamicResource ColorInvisibleBrush}" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+
+                    <Grid x:Name="Grid">
+                        <Path x:Name="Path"
+                              Stretch="Fill"
+                              Fill="{DynamicResource ShellInputBackgroundBrush}"
+                              Data="F1 M 985.8,79.895C 990.126,79.895 993.632,83.4016 993.632,87.7275C 993.632,92.0532 990.126,95.5599 985.8,95.5599C 981.474,95.5599 977.968,92.0532 977.968,87.7275C 977.968,83.4016 981.474,79.895 985.8,79.895 Z "
+                              HorizontalAlignment="Center"
+                              VerticalAlignment="Center"
+                              Width="18"
+                              Height="18"
+                              RenderTransformOrigin="0.5,0.5">
+                            <Path.RenderTransform>
+                                <TransformGroup>
+                                    <ScaleTransform />
+                                    <SkewTransform AngleX="0"
+                                                   AngleY="0" />
+                                    <RotateTransform Angle="0" />
+                                    <TranslateTransform X="0"
+                                                        Y="0" />
+                                </TransformGroup>
+                            </Path.RenderTransform>
+                        </Path>
+                        <Path x:Name="Character"
+                              Stretch="Fill"
+                              Fill="{DynamicResource ShellInputGlyphBrush}"
+                              Data="F1 M 989.272,85.2932C 989.272,85.614 989.231,85.9103 989.147,86.1823C 989.064,86.4542 988.951,86.7059 988.808,86.9374C 988.665,87.1689 988.501,87.3801 988.314,87.571C 988.128,87.762 987.935,87.9362 987.735,88.0936C 987.519,88.2662 987.348,88.4194 987.221,88.553C 987.094,88.6867 986.999,88.8109 986.935,88.9254C 986.871,89.04 986.829,89.1523 986.81,89.2623C 986.791,89.3723 986.781,89.4869 986.781,89.606L 986.781,89.8558L 984.375,89.8558L 984.375,89.2256C 984.375,88.8055 984.442,88.4247 984.576,88.0832C 984.709,87.7418 984.931,87.4374 985.241,87.17C 985.428,87.0126 985.587,86.8755 985.718,86.7586C 985.849,86.6418 985.956,86.5322 986.037,86.4298C 986.117,86.3275 986.176,86.2258 986.212,86.125C 986.248,86.0242 986.266,85.9096 986.266,85.7813C 986.266,85.5994 986.186,85.4467 986.026,85.3229C 985.867,85.1992 985.66,85.1373 985.406,85.1373C 984.991,85.1373 984.576,85.2232 984.163,85.3951C 983.75,85.567 983.357,85.7889 982.986,86.0609L 982.986,83.2466C 983.096,83.184 983.248,83.1145 983.441,83.0381C 983.634,82.9617 983.851,82.8914 984.092,82.8273C 984.333,82.7631 984.589,82.7081 984.862,82.6623C 985.135,82.6165 985.402,82.5935 985.663,82.5935C 986.375,82.5935 986.963,82.6711 987.429,82.8262C 987.894,82.9812 988.263,83.1867 988.536,83.4426C 988.808,83.6985 988.999,83.9876 989.108,84.31C 989.218,84.6323 989.272,84.96 989.272,85.2932 Z M 987.368,91.8977C 987.368,92.0978 987.33,92.2861 987.253,92.4626C 987.177,92.6391 987.067,92.793 986.925,92.9244C 986.782,93.0557 986.604,93.1597 986.392,93.236C 986.179,93.3124 985.936,93.3506 985.663,93.3506C 985.402,93.3506 985.166,93.3113 984.956,93.2326C 984.746,93.1539 984.568,93.0477 984.422,92.9141C 984.276,92.7804 984.164,92.6253 984.085,92.4489C 984.006,92.2724 983.967,92.0887 983.967,91.8977C 983.967,91.6777 984.01,91.4807 984.095,91.3065C 984.181,91.1323 984.299,90.9841 984.45,90.8619C 984.6,90.7397 984.779,90.6464 984.987,90.5823C 985.195,90.5181 985.42,90.486 985.663,90.486C 985.921,90.486 986.155,90.5208 986.365,90.5903C 986.575,90.6599 986.755,90.7565 986.903,90.8802C 987.051,91.004 987.166,91.1518 987.247,91.3237C 987.327,91.4955 987.368,91.6869 987.368,91.8977 Z "
+                              HorizontalAlignment="Center"
+                              VerticalAlignment="Center"
+                              Width="8"
+                              Height="12" />
+                    </Grid>
+
+                    <!--Each state sets a brush on the Border in the template -->
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsKeyboardFocused"
+                                 Value="true">
+                            <Setter Property="Fill"
+                                    TargetName="Path"
+                                    Value="{DynamicResource ShellInputButtonHighlightBrush}" />
+                            <Setter Property="Fill"
+                                    TargetName="Character"
+                                    Value="{DynamicResource ShellInputForegroundBrush}" />
+                        </Trigger>
+                        <Trigger Property="IsMouseOver"
+                                 Value="true">
+                            <Setter Property="Fill"
+                                    TargetName="Path"
+                                    Value="{DynamicResource ShellInputButtonHighlightBrush}" />
+                            <Setter Property="Fill"
+                                    TargetName="Character"
+                                    Value="{DynamicResource ShellInputForegroundBrush}" />
+                        </Trigger>
+                        <Trigger Property="IsPressed"
+                                 Value="true">
+                            <Setter Property="Fill"
+                                    TargetName="Path"
+                                    Value="{DynamicResource ShellInputButtonPressedBrush}" />
+                            <Setter Property="Fill"
+                                    TargetName="Character"
+                                    Value="{DynamicResource ShellInputForegroundBrush}" />
+                        </Trigger>
+                        <Trigger Property="IsEnabled"
+                                 Value="false">
+                            <Setter Property="Foreground"
+                                    Value="{DynamicResource ForegroundDisabledBrush}" />
+                            <Setter Property="Fill"
+                                    TargetName="Character"
+                                    Value="{DynamicResource ForegroundDisabledBrush}" />
+                            <Setter Property="Fill"
+                                    TargetName="Path"
+                                    Value="{DynamicResource ShellInputBackgroundBrush}" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="OverridesDefaultStyle"
+                Value="True" />
+    </Style>
+
+    <Style x:Key="{x:Type WpfControls:CenterButton}"
+           TargetType="{x:Type WpfControls:CenterButton}">
+        <Setter Property="OverridesDefaultStyle"
+                Value="True" />
+        <Setter Property="FocusVisualStyle"
+                Value="{DynamicResource ShellButtonFocusVisualStyle}" />
+        <Setter Property="BorderBrush"
+                Value="Transparent" />
+        <Setter Property="Foreground"
+                Value="{DynamicResource ShellHeaderForegroundBrush}" />
+        <Setter Property="Background"
+                Value="Transparent" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type WpfControls:CenterButton}">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+                        <Border Grid.Row="0"
+                                Grid.RowSpan="2"
+                                Background="{TemplateBinding Background}" />
+                        <Path x:Name="highlightBorder"
+                              VerticalAlignment="Bottom"
+                              HorizontalAlignment="Center"
+                              Grid.Row="1"
+                              Fill="{TemplateBinding HighlightBrush}"
+                              Visibility="Collapsed"
+                              Data="M 0,0 L10,-8 L20,0 L0,0"/>
+                              
+                        <Border x:Name="outerBorder"
+                                Grid.RowSpan="2"
+                                BorderBrush="{TemplateBinding BorderBrush}"
+                                Background="Transparent"
+                                BorderThickness="0">
+                            <ContentPresenter IsHitTestVisible="False"
+                                              VerticalAlignment="Center"
+                                              HorizontalAlignment="Center"
+                                              TextBlock.FontSize="11pt"
+                                              Margin="12, 0, 12, 0" />
+                        </Border>
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="Highlighted"
+                                 Value="True">
+                            <Setter Property="Visibility"
+                                    TargetName="highlightBorder"
+                                    Value="Visible" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+
+        <Style.Triggers>
+            <Trigger Property="IsMouseOver"
+                     Value="True">
+                <Setter Property="Background"
+                        Value="{DynamicResource ShellCenterButtonHoverBrush}" />
+                <Setter Property="BorderBrush"
+                        Value="#28000000" />
+            </Trigger>
+            <Trigger Property="IsEnabled"
+                     Value="False">
+                <Setter Property="Foreground"
+                        Value="{DynamicResource ShellDisabledActionItemColor}" />
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+    <!-- Simple Button - This control sets brushes on each state. Note that these brushes must be listed above since they are static resources -->
+    <Style x:Key="ShellCommandLinkButtonStyle"
+           TargetType="{x:Type Button}"
+           BasedOn="{x:Null}">
+        <Setter Property="FocusVisualStyle"
+                Value="{DynamicResource ShellButtonFocusVisualStyle}" />
+        <Setter Property="Background"
+                Value="{DynamicResource ColorInvisibleBrush}" />
+        <Setter Property="BorderBrush"
+                Value="{DynamicResource ColorInvisibleBrush}" />
+        <Setter Property="Template"
+                Value="{DynamicResource ShellCommandLinkButton}" />
+        <Setter Property="OverridesDefaultStyle"
+                Value="True" />
+        <Setter Property="Foreground"
+                Value="{DynamicResource ShellForegroundBrush}" />
+        <Setter Property="MinHeight"
+                Value="0" />
+        <Setter Property="MinWidth"
+                Value="0" />
+        <Setter Property="Padding"
+                Value="4,2,4,2" />
+    </Style>
+
+    <ControlTemplate x:Key="ShellCommandLinkButton"
+                     TargetType="{x:Type Button}">
+
+        <Grid x:Name="Grid">
+            <Border x:Name="Border"
+                    Background="{DynamicResource ColorInvisibleBrush}"
+                    BorderBrush="{DynamicResource ColorInvisibleBrush}"
+                    Focusable="False"
+                    CornerRadius="1.5,1.5,1.5,1.5"
+                    HorizontalAlignment="Stretch"
+                    Width="Auto"
+                    Height="Auto">
+                <ContentPresenter x:Name="contentPresenter"
+                                  VerticalAlignment="Center"
+                                  Width="Auto"
+                                  Height="Auto"
+                                  Margin="{TemplateBinding Padding}" />
+            </Border>
+
+        </Grid>
+
+        <!--Each state sets a brush on the Border in the template -->
+        <ControlTemplate.Triggers>
+            <Trigger Property="IsKeyboardFocused"
+                     Value="true">
+                <Setter Property="Background"
+                        TargetName="Border"
+                        Value="{DynamicResource ItemSelectionHoverBrush}" />
+            </Trigger>
+            <Trigger Property="IsMouseOver"
+                     Value="true">
+                <Setter Property="Background"
+                        TargetName="Border"
+                        Value="{DynamicResource ItemSelectionHoverBrush}" />
+            </Trigger>
+            <Trigger Property="IsPressed"
+                     Value="true">
+                <Setter Property="Background"
+                        TargetName="Border"
+                        Value="{DynamicResource ItemSelectionPrimaryBrush}" />
+            </Trigger>
+            <Trigger Property="IsEnabled"
+                     Value="false">
+                <Setter Property="Foreground"
+                        Value="{DynamicResource ForegroundDisabledBrush}" />
+                <Setter Property="Opacity"
+                        TargetName="contentPresenter"
+                        Value="0.5" />
+            </Trigger>
+        </ControlTemplate.Triggers>
+    </ControlTemplate>
+
+    <Style x:Key="ShellReadOnlyTextBox"
+           TargetType="{x:Type TextBox}">
+        <Setter Property="OverridesDefaultStyle"
+                Value="True" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate>
+                    <!-- Theres something about text box's that doesn't quite
+                         align properly. The -2 sets it up to align like it's a textblock -->
+                    <ScrollViewer x:Name="PART_ContentHost"
+                                  Margin="-2,0,0,0">
+                        <ScrollViewer.OpacityMask>
+                            <LinearGradientBrush>
+                                <GradientStop Offset="0.9"
+                                              Color="Black" />
+                                <GradientStop Offset="1.0"
+                                              Color="Transparent" />
+                            </LinearGradientBrush>
+                        </ScrollViewer.OpacityMask>
+                    </ScrollViewer>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="Background"
+                Value="Transparent" />
+        <Setter Property="BorderThickness"
+                Value="0" />
+        <Setter Property="FontSize"
+                Value="14" />
+        <Setter Property="FontWeight"
+                Value="Bold" />
+        <Setter Property="Margin"
+                Value="0" />
+        <Setter Property="VerticalAlignment"
+                Value="Center" />
+        <Setter Property="IsReadOnly"
+                Value="True" />
+    </Style>
+    <Style x:Key="ShellHyperlinkStyle"
+           TargetType="{x:Type Hyperlink}">
+        <Setter Property="FocusVisualStyle"
+                Value="{DynamicResource ShellActionButtonFocusVisualStyle}" />
+        <Setter Property="TextBlock.TextDecorations"
+                Value="{x:Null}" />
+        <Setter Property="Foreground"
+                Value="{DynamicResource ShellHeaderForegroundBrush}" />
+
+        <Style.Triggers>
+            <Trigger Property="IsMouseOver"
+                     Value="True">
+                <Setter Property="TextBlock.TextDecorations"
+                        Value="Underline" />
+                <Setter Property="Foreground"
+                        Value="{DynamicResource ShellForegroundAccentBrush}" />
+            </Trigger>
+            <Trigger Property="IsEnabled"
+                     Value="False">
+                <Setter Property="Foreground"
+                        Value="{DynamicResource ShellDisabledActionItemColor}" />
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+    <!-- Scrollviewer for center scroll area -->
+    <ControlTemplate x:Key="ShellCenterScrollViewerTemplate"
+                     TargetType="{x:Type ScrollViewer}">
+        <Grid x:Name="Grid"
+              Background="{TemplateBinding Background}">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+            <ScrollContentPresenter Margin="{TemplateBinding Padding}"
+                                    x:Name="PART_ScrollContentPresenter"
+                                    Grid.Column="1"
+                                    Grid.Row="0"
+                                    Content="{TemplateBinding Content}"
+                                    ContentTemplate="{TemplateBinding ContentTemplate}"
+                                    CanContentScroll="{TemplateBinding CanContentScroll}"
+                                    CanHorizontallyScroll="False"
+                                    CanVerticallyScroll="False" />
+            <RepeatButton Grid.Column="0"
+                          Command="{x:Static ScrollBar.LineLeftCommand}"
+                          Style="{DynamicResource ShellCenterRepeatButtonLeft}"
+                          Visibility="{TemplateBinding ComputedHorizontalScrollBarVisibility}" />
+            <RepeatButton Grid.Column="2"
+                          Command="{x:Static ScrollBar.LineRightCommand}"
+                          Style="{DynamicResource ShellCenterRepeatButtonRight}"
+                          Visibility="{TemplateBinding ComputedHorizontalScrollBarVisibility}" />
+        </Grid>
+    </ControlTemplate>
+
+    <Style x:Key="ShellCenterScrollViewerStyle"
+           TargetType="{x:Type ScrollViewer}">
+        <Setter Property="HorizontalScrollBarVisibility"
+                Value="Auto" />
+        <Setter Property="VerticalScrollBarVisibility"
+                Value="Disabled" />
+        <Setter Property="Template"
+                Value="{StaticResource ShellCenterScrollViewerTemplate}" />
+    </Style>
+
+    <Style x:Key="ShellCenterRepeatButtonLeft"
+           TargetType="{x:Type ButtonBase}">
+        <Setter Property="FocusVisualStyle"
+                Value="{DynamicResource ShellButtonFocusVisualStyle}" />
+        <Setter Property="HorizontalContentAlignment"
+                Value="Center" />
+        <Setter Property="Stylus.IsPressAndHoldEnabled"
+                Value="false" />
+        <Setter Property="VerticalContentAlignment"
+                Value="Center" />
+        <Setter Property="Padding"
+                Value="3" />
+        <Setter Property="Foreground"
+                Value="{DynamicResource ShellScrollViewerRepeatButtonUnpressed}" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type ButtonBase}">
+                    <Path Stretch="Uniform"
+                          Fill="{TemplateBinding Foreground}"
+                          Data="F1 M 0,18 L 12,0 L 12,36 L 0,18 Z "
+                          Margin="{TemplateBinding Padding}"
+                          HorizontalAlignment="Center"
+                          VerticalAlignment="Center" />
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Style.Triggers>
+            <Trigger Property="IsPressed"
+                     Value="True">
+                <Setter Property="Foreground"
+                        Value="{DynamicResource ShellScrollViewerRepeatButtonPressed}" />
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="ShellCenterRepeatButtonRight"
+           TargetType="{x:Type ButtonBase}"
+           BasedOn="{StaticResource ShellCenterRepeatButtonLeft}">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type ButtonBase}">
+                    <Path Stretch="Uniform"
+                          Fill="{TemplateBinding Foreground}"
+                          Data="F1 M 12,18 L 0,0 L 0,36 L 12,18 Z "
+                          Margin="{TemplateBinding Padding}"
+                          HorizontalAlignment="Center"
+                          VerticalAlignment="Center" />
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="ShellHeaderVerticalSeperator"
+           TargetType="{x:Type Path}">
+        <Setter Property="Data"
+                Value="M 0,0 L 0,36" />
+        <Setter Property="Stretch"
+                Value="None" />
+        <Setter Property="Stroke"
+                Value="{DynamicResource ShellHeaderSeperatorColor}" />
+        <Setter Property="VerticalAlignment"
+                Value="Center" />
+        <Setter Property="Margin"
+                Value="12,0,12,0" />
+        <Setter Property="SnapsToDevicePixels"
+                Value="True" />
+    </Style>
+
+    <Style x:Key="ShellCommandBarVerticalSeperator"
+           TargetType="{x:Type Path}">
+        <Setter Property="Data"
+                Value="M 0,0 L 0,24" />
+        <Setter Property="Stretch"
+                Value="None" />
+        <Setter Property="Stroke"
+                Value="{DynamicResource ShellCommandBarSeperatorColor}" />
+        <Setter Property="VerticalAlignment"
+                Value="Center" />
+        <Setter Property="Margin"
+                Value="12,0,12,0" />
+        <Setter Property="SnapsToDevicePixels"
+                Value="True" />
+    </Style>
+
+    <Style x:Key="ShellCenterDropDownButton"
+           TargetType="{x:Type WpfControls:DropDownButton}">
+        <Setter Property="OverridesDefaultStyle"
+                Value="True" />
+        <Setter Property="FocusVisualStyle"
+                Value="{DynamicResource ShellButtonFocusVisualStyle}" />
+        <Setter Property="Background"
+                Value="Transparent" />
+        <Setter Property="BorderThickness"
+                Value="0" />
+        <Setter Property="HorizontalContentAlignment"
+                Value="Center" />
+        <Setter Property="VerticalContentAlignment"
+                Value="Center" />
+        <Setter Property="Padding"
+                Value="12,5,3,5" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type WpfControls:DropDownButton}">
+                    <Grid Background="Transparent">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="Auto" />
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="*" />
+                        </Grid.RowDefinitions>
+                        <Border x:Name="hoverBackground"
+                                Grid.Row="0"
+                                Grid.ColumnSpan="2"
+                                Grid.RowSpan="2"
+                                Visibility="Collapsed"
+                                Background="{DynamicResource ShellCenterButtonHoverBrush}" />
+                        <ContentPresenter Grid.Column="0"
+                                          Grid.RowSpan="2"
+                                          SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"
+                                          HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                          Margin="{TemplateBinding Padding}"
+                                          VerticalAlignment="{TemplateBinding VerticalContentAlignment}" />
+                        <Path x:Name="chevron"
+                              Margin="3,0,12,0"
+                              Grid.Column="1"
+                              Grid.RowSpan="2"
+                              Stretch="None"
+                              Fill="{DynamicResource ShellDropDownArrowFill}"
+                              Data="F1 M 0,0 L 9,0 L 4.5,5 0,0 Z "
+                              Width="9"
+                              HorizontalAlignment="Right"
+                              VerticalAlignment="Center"
+                              Height="5" />
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsEnabled"
+                                 Value="false">
+                            <Setter Property="Foreground"
+                                    Value="{DynamicResource ShellDisabledActionItemColor}" />
+                        </Trigger>
+                        <Trigger Property="IsMouseOver"
+                                 Value="True">
+                            <Setter Property="Fill"
+                                    TargetName="chevron"
+                                    Value="{DynamicResource ShellDisabledActionItemColor}" />
+                            <Setter TargetName="hoverBackground"
+                                    Property="Visibility"
+                                    Value="Visible" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="ShellDropDownButtonMenuStyle"
+           TargetType="{x:Type ContextMenu}">
+        <Setter Property="OverridesDefaultStyle"
+                Value="True" />
+        <Setter Property="LayoutTransform">
+            <Setter.Value>
+                <ScaleTransform ScaleX="{Binding Source={x:Static Application.Current}, Path=ScaleFactorManager.ScaleFactor}"
+                                ScaleY="{Binding Source={x:Static Application.Current}, Path=ScaleFactorManager.ScaleFactor}" />
+            </Setter.Value>
+        </Setter>
+        <Setter Property="Background"
+                Value="Transparent" />
+        <Setter Property="BorderThickness"
+                Value="1" />
+        <Setter Property="Background"
+                Value="{DynamicResource ShellDropDownMenuBackground}" />
+        <Setter Property="HorizontalContentAlignment"
+                Value="Center" />
+        <Setter Property="BorderBrush"
+                Value="{DynamicResource ShellDropDownMenuBorder}" />
+        <Setter Property="Control.Foreground"
+                Value="{DynamicResource ShellHeaderForegroundBrush}" />
+        <Setter Property="Margin"
+                Value="3" />
+        <Setter Property="Padding"
+                Value="6" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type ContextMenu}">
+                    <Grid Margin="{TemplateBinding Padding}">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+                        <Border Grid.Row="0"
+                                Height="20"
+                                Background="{DynamicResource ShellDropDownMenuTopGradient}" />
+                        <Border  Background="{TemplateBinding Background}"
+                                 Grid.Row="1" />
+                        <Border Grid.Row="2"
+                                Height="20"
+                                Background="{DynamicResource ShellDropDownMenuBottomGradient}" />
+
+                        <Border Grid.RowSpan="3"
+                                Background="Transparent"
+                                BorderBrush="{TemplateBinding BorderBrush}"
+                                BorderThickness="{TemplateBinding BorderThickness}">
+                            <ScrollViewer Style="{DynamicResource {ComponentResourceKey ResourceId=MenuScrollViewer, TypeInTargetAssembly={x:Type FrameworkElement}}}"
+                                          CanContentScroll="True">
+                                <ItemsPresenter SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"
+                                                Margin="{TemplateBinding Padding}"
+                                                KeyboardNavigation.DirectionalNavigation="Cycle" />
+                            </ScrollViewer>
+                        </Border>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="ShellDropDownButtonOpenItemsMenuStyle"
+           TargetType="{x:Type ContextMenu}"
+           BasedOn="{StaticResource ShellDropDownButtonMenuStyle}">
+        <Setter Property="OverridesDefaultStyle"
+                Value="True" />
+        <Setter Property="Margin"
+                Value="3" />
+        <Setter Property="Padding"
+                Value="3" />
+        <Setter Property="MinWidth"
+                Value="150" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type ContextMenu}">
+                    <Border Background="{TemplateBinding Background}"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="{TemplateBinding BorderThickness}">
+                        <ScrollViewer Style="{DynamicResource {ComponentResourceKey ResourceId=MenuScrollViewer, TypeInTargetAssembly={x:Type FrameworkElement}}}"
+                                      CanContentScroll="True">
+                            <ItemsPresenter SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"
+                                            Margin="{TemplateBinding Padding}"
+                                            KeyboardNavigation.DirectionalNavigation="Cycle" />
+                        </ScrollViewer>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="ShellOpenItemsMenuItem"
+           TargetType="{x:Type MenuItem}">
+        <Setter Property="OverridesDefaultStyle"
+                Value="True" />
+        <Setter Property="Background"
+                Value="{DynamicResource ShellOpenItemsHoverColorBrush}" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type MenuItem}">
+                    <Border x:Name="Bd"
+                            Background="{TemplateBinding Background}"
+                            Margin="{TemplateBinding Padding}"
+                            Padding="3"
+                            CornerRadius="2">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="20" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <ContentPresenter ContentSource="Icon"
+                                              Width="16"
+                                              Height="16"
+                                              Margin="1,1,3,1" />
+
+                            <ContentPresenter Grid.Column="1"
+                                              ContentSource="Header"
+                                              HorizontalAlignment="Left"
+                                              VerticalAlignment="Center" />
+                        </Grid>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="Padding"
+                Value="0" />
+        <Style.Triggers>
+            <Trigger Property="IsHighlighted"
+                     Value="False">
+                <Setter Property="Background"
+                        Value="Transparent" />
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+    
+    <Style x:Key="ShellEmptyButton"
+           TargetType="{x:Type Button}">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                      VerticalAlignment="{TemplateBinding VerticalContentAlignment}" />
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Style.Triggers>
+            <Trigger Property="IsEnabled"
+                     Value="False">
+                <Setter Property="Foreground"
+                        Value="{DynamicResource ShellDisabledActionItemColor}" />
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+    
+    <Style x:Key="ShellScaleFrameworkElement"
+           TargetType="{x:Type FrameworkElement}">
+        <Setter Property="LayoutTransform">
+            <Setter.Value>
+                <ScaleTransform ScaleX="{Binding Source={x:Static Application.Current}, Path=ScaleFactorManager.ScaleFactor}"
+                                ScaleY="{Binding Source={x:Static Application.Current}, Path=ScaleFactorManager.ScaleFactor}" />
+            </Setter.Value>
+        </Setter>
+    </Style>
+</ResourceDictionary>

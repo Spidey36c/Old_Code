@@ -1,0 +1,8 @@
+package javaCalculator;
+
+import javax.swing.JPanel;
+
+public class Calculator extends JPanel 
+{
+
+}

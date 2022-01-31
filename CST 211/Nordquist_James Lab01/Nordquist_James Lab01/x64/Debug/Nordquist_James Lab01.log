@@ -1,0 +1,12 @@
+﻿  Board.cpp
+  Cell.cpp
+  Exception.cpp
+D:\CST 211\Nordquist_James Lab01\Nordquist_James Lab01\Exception.cpp(38,2): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\CST 211\Nordquist_James Lab01\Nordquist_James Lab01\Exception.cpp(54,2): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\CST 211\Nordquist_James Lab01\Nordquist_James Lab01\Exception.cpp(90,3): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\CST 211\Nordquist_James Lab01\Nordquist_James Lab01\Exception.cpp(125,2): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  Minesweeper.cpp
+  stub.cpp
+D:\CST 211\Nordquist_James Lab01\Nordquist_James Lab01\stub.cpp(40,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+  Generating Code...
+  Nordquist_James Lab01.vcxproj -> D:\CST 211\Nordquist_James Lab01\x64\Debug\Nordquist_James Lab01.exe

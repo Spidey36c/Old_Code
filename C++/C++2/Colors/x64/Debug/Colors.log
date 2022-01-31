@@ -1,0 +1,8 @@
+﻿  colors.cpp
+z:\c++2\colors\colors.cpp(26): warning C4309: 'static_cast': truncation of constant value
+z:\c++2\colors\colors.cpp(27): warning C4309: 'static_cast': truncation of constant value
+z:\c++2\colors\colors.cpp(28): warning C4309: 'static_cast': truncation of constant value
+z:\c++2\colors\colors.cpp(29): warning C4309: 'static_cast': truncation of constant value
+z:\c++2\colors\colors.cpp(30): warning C4309: 'static_cast': truncation of constant value
+z:\c++2\colors\colors.cpp(31): warning C4309: 'static_cast': truncation of constant value
+  Colors.vcxproj -> Z:\C++2\x64\Debug\Colors.exe

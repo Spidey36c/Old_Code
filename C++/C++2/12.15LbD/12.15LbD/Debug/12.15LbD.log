@@ -1,0 +1,4 @@
+﻿  Source.cpp
+z:\c++2\12.15lbd\12.15lbd\source.cpp(49): warning C4996: 'stricmp': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _stricmp. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.16299.0\ucrt\string.h(554): note: see declaration of 'stricmp'
+  12.15LbD.vcxproj -> Z:\C++2\12.15LbD\Debug\12.15LbD.exe

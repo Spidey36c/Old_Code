@@ -1,0 +1,31 @@
+﻿  Character.cpp
+e:\lab 8 james nordquist\characterclass\character.cpp(77): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+e:\lab 8 james nordquist\characterclass\character.cpp(78): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+e:\lab 8 james nordquist\characterclass\character.cpp(82): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+e:\lab 8 james nordquist\characterclass\character.cpp(83): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+e:\lab 8 james nordquist\characterclass\character.cpp(105): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+e:\lab 8 james nordquist\characterclass\character.cpp(123): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+e:\lab 8 james nordquist\characterclass\character.cpp(260): warning C4244: '*=': conversion from 'double' to 'int', possible loss of data
+e:\lab 8 james nordquist\characterclass\character.cpp(261): warning C4244: '*=': conversion from 'double' to 'int', possible loss of data
+e:\lab 8 james nordquist\characterclass\character.cpp(262): warning C4244: '*=': conversion from 'double' to 'int', possible loss of data
+e:\lab 8 james nordquist\characterclass\character.cpp(272): warning C4244: '*=': conversion from 'double' to 'int', possible loss of data
+e:\lab 8 james nordquist\characterclass\character.cpp(273): warning C4244: '*=': conversion from 'double' to 'int', possible loss of data
+e:\lab 8 james nordquist\characterclass\character.cpp(274): warning C4244: '*=': conversion from 'double' to 'int', possible loss of data
+  GiantEagle.cpp
+  Griffon.cpp
+  Imp.cpp
+e:\lab 8 james nordquist\characterclass\imp.cpp(57): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+  Knight.cpp
+  Lich.cpp
+  Lion.cpp
+  Monster.cpp
+  Skeleton.cpp
+  Slime.cpp
+  stub.cpp
+e:\lab 8 james nordquist\characterclass\stub.cpp(40): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+  Wizard.cpp
+  Zombie.cpp
+  Generating code
+  All 524 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Finished generating code
+  Characterclass.vcxproj -> E:\Lab 8 James Nordquist\x64\Release\Lab 8 James Nordquist.exe

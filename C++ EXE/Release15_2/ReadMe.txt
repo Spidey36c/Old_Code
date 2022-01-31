@@ -1,0 +1,1 @@
+This simulates dealing cards and shuffling them. If you select over 52 cards it will reshuffle the deck and deal the requested cards.

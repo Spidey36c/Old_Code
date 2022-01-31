@@ -1,0 +1,10 @@
+D:\CST236\Lab08\CodedUIStarterCodeDemo\SimpleWinformsCalculator\bin\Debug\SimpleWinformsCalculator.exe.config
+D:\CST236\Lab08\CodedUIStarterCodeDemo\SimpleWinformsCalculator\bin\Debug\SimpleWinformsCalculator.exe
+D:\CST236\Lab08\CodedUIStarterCodeDemo\SimpleWinformsCalculator\bin\Debug\SimpleWinformsCalculator.pdb
+D:\CST236\Lab08\CodedUIStarterCodeDemo\SimpleWinformsCalculator\obj\Debug\SimpleWinformsCalculator.csprojAssemblyReference.cache
+D:\CST236\Lab08\CodedUIStarterCodeDemo\SimpleWinformsCalculator\obj\Debug\SimpleWinformsCalculator.Form1.resources
+D:\CST236\Lab08\CodedUIStarterCodeDemo\SimpleWinformsCalculator\obj\Debug\SimpleWinformsCalculator.Properties.Resources.resources
+D:\CST236\Lab08\CodedUIStarterCodeDemo\SimpleWinformsCalculator\obj\Debug\SimpleWinformsCalculator.csproj.GenerateResource.cache
+D:\CST236\Lab08\CodedUIStarterCodeDemo\SimpleWinformsCalculator\obj\Debug\SimpleWinformsCalculator.csproj.CoreCompileInputs.cache
+D:\CST236\Lab08\CodedUIStarterCodeDemo\SimpleWinformsCalculator\obj\Debug\SimpleWinformsCalculator.exe
+D:\CST236\Lab08\CodedUIStarterCodeDemo\SimpleWinformsCalculator\obj\Debug\SimpleWinformsCalculator.pdb

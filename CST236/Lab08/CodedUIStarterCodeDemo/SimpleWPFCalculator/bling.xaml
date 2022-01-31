@@ -1,0 +1,141 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <SolidColorBrush x:Key="PageButtonForegroundBrush" Color="#FFFFFFFF"/>
+    <SolidColorBrush x:Key="PageButtonForegroundDisabledBrush" Color="#FFEFEFEF"/>
+    <LinearGradientBrush x:Key="PageButtonGradientBrush" EndPoint="0,1" StartPoint="0,0">
+        <GradientStop Color="#FF71ACD2" Offset="1"/>
+        <GradientStop Color="#FF21709F" Offset="0.455"/>
+    </LinearGradientBrush>
+    <LinearGradientBrush x:Key="PageButtonGradientFocusedBrush" EndPoint="0,1" StartPoint="0,0">
+        <GradientStop Color="#FF44B2FB" Offset="1"/>
+        <GradientStop Color="#FF257EB2" Offset="0.49"/>
+    </LinearGradientBrush>
+    <LinearGradientBrush x:Key="PageButtonGradientPressedBrush" EndPoint="0,1" StartPoint="0,0">
+        <GradientStop Color="#FF62B5EB" Offset="1"/>
+        <GradientStop Color="#FF2B91CE" Offset="0.469"/>
+    </LinearGradientBrush>
+    <LinearGradientBrush x:Key="PageButtonGradientDisabledBrush" EndPoint="0,1" StartPoint="0,0">
+        <GradientStop Color="#FFDADADA" Offset="1"/>
+        <GradientStop Color="#FFA5A5A5" Offset="0.455"/>
+    </LinearGradientBrush>
+    <LinearGradientBrush x:Key="PageButtonPhongGradientBrush" EndPoint="0.5,1" StartPoint="0.5,0">
+        <GradientStop Color="#99FFFFFF" Offset="0.2"/>
+        <GradientStop Color="#4CFFFFFF" Offset="0.991"/>
+    </LinearGradientBrush>
+    <LinearGradientBrush x:Key="PageButtonPhongGradientDisabledBrush"
+                         EndPoint="0.5,1"
+                         StartPoint="0.5,0">
+        <GradientStop Color="#99FFFFFF"
+                      Offset="0.2" />
+        <GradientStop Color="#4CFFFFFF"
+                      Offset="0.991" />
+    </LinearGradientBrush>
+    <LinearGradientBrush x:Key="PageButtonPhongGradientPressedBrush"
+                         EndPoint="0.5,1"
+                         StartPoint="0.5,0">
+        <GradientStop Color="#99FFFFFF"
+                      Offset="0.2" />
+        <GradientStop Color="#4CFFFFFF"
+                      Offset="0.991" />
+    </LinearGradientBrush>
+    <LinearGradientBrush x:Key="PageButtonPhongBorderBrush" EndPoint="0.5,1" StartPoint="0.5,0">
+        <GradientStop Color="#FFFFFFFF" Offset="0"/>
+        <GradientStop Color="#00FFFFFF" Offset="1"/>
+    </LinearGradientBrush>
+    <OuterGlowBitmapEffect x:Key="PageButtonFocusedBitmapEffect" GlowColor="#FF45AAE5" GlowSize="4" Opacity="1" Noise="0"/>
+    <DropShadowBitmapEffect x:Key="PageButtonContentShadowEffect" Noise="0" Opacity="0.4" ShadowDepth="1" Softness="0"/>
+    <SolidColorBrush x:Key="PageButtonBorderBrush" Color="Transparent" />
+
+    <SolidColorBrush x:Key="PageInputBackgroundBrush" Color="#FFFFFFFF"/>
+    <SolidColorBrush x:Key="PageInputGlyphBrush" Color="#FFFFFFFF"/>
+    <SolidColorBrush x:Key="PageInputForegroundBrush" Color="#FF000000"/>
+    <SolidColorBrush x:Key="PageInputBorderBrush" Color="#FFBABABA"/>
+
+    <!-- Button -->
+    <Style x:Key="{x:Type Button}"
+           TargetType="{x:Type Button}">
+        <Setter Property="BorderThickness"
+                Value="1" />
+        <Setter Property="Foreground"
+                Value="{DynamicResource PageButtonForegroundBrush}" />
+        <Setter Property="HorizontalContentAlignment"
+                Value="Center" />
+        <Setter Property="VerticalContentAlignment"
+                Value="Center" />
+        <Setter Property="Padding"
+                Value="1" />
+        <Setter Property="OverridesDefaultStyle"
+                Value="True" />
+        <Setter Property="MinHeight"
+                Value="23" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border Background="{DynamicResource PageButtonGradientBrush}"
+                            CornerRadius="6"
+                            BorderThickness="1"
+                            BorderBrush="{DynamicResource PageButtonBorderBrush}"
+                            x:Name="border"
+                            SnapsToDevicePixels="True">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="0.48*" />
+                                <RowDefinition Height="0.52*" />
+                            </Grid.RowDefinitions>
+                            <Border HorizontalAlignment="Stretch"
+                                    Margin="3,1,3,0"
+                                    BorderThickness="1"
+                                    CornerRadius="4"
+                                    x:Name="phong"
+                                    Opacity="0.6"
+                                    SnapsToDevicePixels="True"
+                                    Background="{DynamicResource PageButtonPhongGradientBrush}"
+                                    BorderBrush="{DynamicResource PageButtonPhongBorderBrush}" />
+                            <Border Grid.Row="0"
+                                    Grid.RowSpan="2"
+                                    HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                    VerticalAlignment="{TemplateBinding VerticalContentAlignment}">
+                                <ContentPresenter SnapsToDevicePixels="True"
+                                                  RecognizesAccessKey="True"
+                                                  HorizontalAlignment="Center"
+                                                  VerticalAlignment="Center"
+                                                  Margin="{TemplateBinding Padding}" />
+                            </Border>
+                        </Grid>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsKeyboardFocused"
+                                 Value="true">
+                            <Setter Property="BitmapEffect"
+                                    TargetName="border"
+                                    Value="{DynamicResource PageButtonFocusedBitmapEffect}" />
+                        </Trigger>
+                        <Trigger Property="IsEnabled"
+                                 Value="false">
+                            <Setter Property="Foreground"
+                                    Value="{DynamicResource PageButtonForegroundDisabledBrush}" />
+                            <Setter Property="Background"
+                                    TargetName="border"
+                                    Value="{DynamicResource PageButtonGradientDisabledBrush}" />
+                        </Trigger>
+                        <Trigger Property="IsMouseOver"
+                                 Value="True">
+                            <Setter Property="Background"
+                                    TargetName="border"
+                                    Value="{DynamicResource PageButtonGradientFocusedBrush}" />
+                        </Trigger>
+                        <Trigger Property="IsPressed"
+                                 Value="True">
+                            <Setter Property="Background"
+                                    TargetName="border"
+                                    Value="{DynamicResource PageButtonGradientPressedBrush}" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    
+</ResourceDictionary>

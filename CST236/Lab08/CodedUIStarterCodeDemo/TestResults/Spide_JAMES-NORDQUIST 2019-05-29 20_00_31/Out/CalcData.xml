@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DataContextData>
+  <DataContextRow InputValue1 ="40" 
+                  InputValue2 ="40" 
+                  ExpectedAddAnswer ="80"/>
+  <DataContextRow InputValue1 ="20"
+                  InputValue2 ="10"
+                  ExpectedAddAnswer ="30"/>
+  <DataContextRow InputValue1 ="8" 
+                  InputValue2 ="20" 
+                  ExpectedAddAnswer ="28"/>
+  <DataContextRow InputValue1 ="10"
+                  InputValue2 ="10"
+                  ExpectedAddAnswer ="20"/>
+</DataContextData>

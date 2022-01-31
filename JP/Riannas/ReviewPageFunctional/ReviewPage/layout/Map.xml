@@ -1,0 +1,81 @@
+﻿<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:minHeight="25px"
+    android:minWidth="25px"
+    android:id="@+id/main_Layout">
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="86.0dp"
+        android:layout_alignParentBottom="true"
+        android:weightSum="2"
+        android:id="@+id/linearLayout1">
+        <Button
+            android:text="Rider"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textSize="50px"
+            android:background="@drawable/buttonborder"
+            android:id="@+id/RiderButton" />
+        <Button
+            android:text="Driver"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textSize="50px"
+            android:background="@drawable/buttonborder"
+            
+            android:id="@+id/DriverButton" />
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/linearLayout4" 
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="86dp" >
+        <fragment
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:name="map"
+            android:id="@+id/map"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            class="com.google.android.gms.maps.MapFragment"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="86dp"
+        android:layout_alignParentTop="true"
+        android:id="@+id/linearLayout2">
+        <TextView
+            android:text="Choose A Trip   ⊕                  "
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:textSize="50px"
+            android:minWidth="25px"
+            android:minHeight="25px"
+            android:id="@+id/textView1" />
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:id="@+id/linearLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="86dp"
+        android:paddingBottom="20dp"
+        android:weightSum="3">
+        
+
+    </LinearLayout>
+
+
+</RelativeLayout>

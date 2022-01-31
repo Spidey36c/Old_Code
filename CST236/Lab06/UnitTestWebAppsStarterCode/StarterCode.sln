@@ -1,0 +1,115 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26730.10
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "BooksWS", "BooksWS", "{658F5FE1-B3F9-4A9B-AD20-C5FDA5860E1B}"
+	ProjectSection(WebsiteProperties) = preProject
+		SccProjectName = "SAK"
+		SccAuxPath = "SAK"
+		SccLocalPath = "SAK"
+		SccProvider = "SAK"
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.6.1"
+		Debug.AspNetCompiler.VirtualPath = "/BooksWS"
+		Debug.AspNetCompiler.PhysicalPath = "BooksWS\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\BooksWS\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/BooksWS"
+		Release.AspNetCompiler.PhysicalPath = "BooksWS\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\BooksWS\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "51701"
+		VWDDynamicPort = "true"
+		SlnRelativePath = "BooksWS\"
+	EndProjectSection
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Books", "Books", "{B1A29B91-5DC0-4B62-B0D4-35C1C7F8FC1D}"
+	ProjectSection(WebsiteProperties) = preProject
+		SccProjectName = "SAK"
+		SccAuxPath = "SAK"
+		SccLocalPath = "SAK"
+		SccProvider = "SAK"
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.6.1"
+		Debug.AspNetCompiler.VirtualPath = "/Books"
+		Debug.AspNetCompiler.PhysicalPath = "Books\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\Books\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/Books"
+		Release.AspNetCompiler.PhysicalPath = "Books\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\Books\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "1642"
+		SlnRelativePath = "Books\"
+	EndProjectSection
+	ProjectSection(ProjectDependencies) = postProject
+		{658F5FE1-B3F9-4A9B-AD20-C5FDA5860E1B} = {658F5FE1-B3F9-4A9B-AD20-C5FDA5860E1B}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookWSTest", "BookWSTest\BookWSTest.csproj", "{6EBDEED3-A21B-4507-B7EF-4782C04C2CEF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BooksTest", "BooksTest\BooksTest.csproj", "{16B48D11-512A-4ABE-9C19-6361FA49EE55}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{658F5FE1-B3F9-4A9B-AD20-C5FDA5860E1B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{658F5FE1-B3F9-4A9B-AD20-C5FDA5860E1B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{658F5FE1-B3F9-4A9B-AD20-C5FDA5860E1B}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{658F5FE1-B3F9-4A9B-AD20-C5FDA5860E1B}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{B1A29B91-5DC0-4B62-B0D4-35C1C7F8FC1D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B1A29B91-5DC0-4B62-B0D4-35C1C7F8FC1D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B1A29B91-5DC0-4B62-B0D4-35C1C7F8FC1D}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{B1A29B91-5DC0-4B62-B0D4-35C1C7F8FC1D}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{6EBDEED3-A21B-4507-B7EF-4782C04C2CEF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6EBDEED3-A21B-4507-B7EF-4782C04C2CEF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6EBDEED3-A21B-4507-B7EF-4782C04C2CEF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6EBDEED3-A21B-4507-B7EF-4782C04C2CEF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{16B48D11-512A-4ABE-9C19-6361FA49EE55}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{16B48D11-512A-4ABE-9C19-6361FA49EE55}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{16B48D11-512A-4ABE-9C19-6361FA49EE55}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{16B48D11-512A-4ABE-9C19-6361FA49EE55}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {45A801B3-63A5-4BF2-BD69-1F3D301EE22C}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 5
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://tfs.cset.oit.edu/cst236testing
+		SccLocalPath0 = .
+		SccWebProject1 = true
+		SccProjectUniqueName1 = BooksWS
+		SccProjectName1 = BooksWS
+		SccLocalPath1 = BooksWS
+		SccProjectEnlistmentChoice1 = 2
+		SccWebProject2 = true
+		SccProjectUniqueName2 = Books
+		SccProjectName2 = Books
+		SccLocalPath2 = Books
+		SccProjectEnlistmentChoice2 = 2
+		SccProjectUniqueName3 = BookWSTest\\BookWSTest.csproj
+		SccProjectName3 = BookWSTest
+		SccLocalPath3 = BookWSTest
+		SccProjectUniqueName4 = BooksTest\\BooksTest.csproj
+		SccProjectName4 = BooksTest
+		SccLocalPath4 = BooksTest
+	EndGlobalSection
+EndGlobal

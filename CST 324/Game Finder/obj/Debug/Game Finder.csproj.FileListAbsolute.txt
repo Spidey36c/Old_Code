@@ -1,0 +1,32 @@
+Z:\CST324\Game Finder\bin\Debug\Game Finder.exe.config
+Z:\CST324\Game Finder\bin\Debug\Game Finder.exe
+Z:\CST324\Game Finder\bin\Debug\Game Finder.pdb
+Z:\CST324\Game Finder\obj\Debug\Game Finder.csprojAssemblyReference.cache
+Z:\CST324\Game Finder\obj\Debug\Game_Finder.Properties.Resources.resources
+Z:\CST324\Game Finder\obj\Debug\Game Finder.csproj.GenerateResource.cache
+Z:\CST324\Game Finder\obj\Debug\Game Finder.csproj.CoreCompileInputs.cache
+Z:\CST324\Game Finder\obj\Debug\Game Finder.exe
+Z:\CST324\Game Finder\obj\Debug\Game Finder.pdb
+Z:\CST324\Game Finder\obj\Debug\Game_Finder.CreateAccount.resources
+Z:\CST324\Game Finder\obj\Debug\Game_Finder.Log.resources
+Z:\CST324\Game Finder\obj\Debug\Game_Finder.LogIn.resources
+Z:\CST324\Game Finder\obj\Debug\Game_Finder.GameDesc.resources
+Z:\CST324\Game Finder\obj\Debug\Game_Finder.UpdateAccount.resources
+Z:\CST324\Game Finder\obj\Debug\Game_Finder.PrevGame.resources
+Z:\CST324\Game Finder\obj\Debug\Game_Finder.ViewGame.resources
+Z:\CST324\Game Finder\obj\Debug\Game_Finder.GameCreate.resources
+D:\CST 324\Game Finder\bin\Debug\Game Finder.exe.config
+D:\CST 324\Game Finder\bin\Debug\Game Finder.exe
+D:\CST 324\Game Finder\bin\Debug\Game Finder.pdb
+D:\CST 324\Game Finder\obj\Debug\Game Finder.csprojAssemblyReference.cache
+D:\CST 324\Game Finder\obj\Debug\Game_Finder.GameCreate.resources
+D:\CST 324\Game Finder\obj\Debug\Game_Finder.PrevGame.resources
+D:\CST 324\Game Finder\obj\Debug\Game_Finder.UpdateAccount.resources
+D:\CST 324\Game Finder\obj\Debug\Game_Finder.CreateAccount.resources
+D:\CST 324\Game Finder\obj\Debug\Game_Finder.GameDesc.resources
+D:\CST 324\Game Finder\obj\Debug\Game_Finder.Log.resources
+D:\CST 324\Game Finder\obj\Debug\Game_Finder.LogIn.resources
+D:\CST 324\Game Finder\obj\Debug\Game_Finder.Properties.Resources.resources
+D:\CST 324\Game Finder\obj\Debug\Game Finder.csproj.GenerateResource.cache
+D:\CST 324\Game Finder\obj\Debug\Game Finder.exe
+D:\CST 324\Game Finder\obj\Debug\Game Finder.pdb

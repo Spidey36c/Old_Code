@@ -1,0 +1,17 @@
+﻿<Window x:Class="SimpleWPFCalculator.Window1"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Title="Demo Calculator WPF" Height="359" Width="521">
+    <Grid Width="489">
+        <Label  FontSize="16" FontWeight="Bold" ForceCursor="True" Height="30" HorizontalAlignment="Left" Margin="22,45,0,0" Name="lblInput1" VerticalAlignment="Top" Width="141"   >Input Number 1</Label>
+        <Label  FontSize="16" FontWeight="Bold" ForceCursor="True" Height="30" HorizontalAlignment="Left" Margin="22,0,0,52" Name="lblAnswer" VerticalAlignment="Bottom" Width="141" ClipToBounds="True">Answer</Label>
+        <Label  FontSize="16" FontWeight="Bold" ForceCursor="True" Height="30" HorizontalAlignment="Left" Margin="22,107,0,0" Name="lblinput2" VerticalAlignment="Top" Width="141">Input Number 2</Label>
+        <TextBox  FontSize="16" FontWeight="Bold" Height="28" Margin="213,45,105,0" Name="textInput1" VerticalAlignment="Top" TabIndex="1" />
+        <TextBox  FontSize="16" FontWeight="Bold" Height="28" Margin="213,107,105,0" Name="textInput2" VerticalAlignment="Top" TabIndex="2" />
+        <TextBox  FontSize="16" FontWeight="Bold" Height="28" Margin="213,0,105,52" Name="textAnswer" VerticalAlignment="Bottom" IsReadOnly="True" TabIndex="7" />
+        <Button  FontSize="16" FontWeight="Bold" Height="29" HorizontalAlignment="Left" Margin="22,0,0,125" Name="btnAdd" VerticalAlignment="Bottom" Width="80"    Click="btnAdd_Click" TabIndex="3">Add</Button>
+        <Button  FontSize="16" FontWeight="Bold" Height="29" HorizontalAlignment="Right" Margin="0,0,105,125" Name="btnDivide" VerticalAlignment="Bottom" Width="80" Click="btnDivide_Click" TabIndex="6">Divide</Button>
+        <Button  FontSize="16" FontWeight="Bold" Height="29" HorizontalAlignment="Left" Margin="213,0,0,125" Name="btnMultiply" VerticalAlignment="Bottom"  Width="80" Click="btnMultiply_Click" TabIndex="5">Multiply</Button>
+        <Button  FontSize="16" FontWeight="Bold" Height="29" HorizontalAlignment="Left" Margin="117,0,0,125" Name="btnSubtract" VerticalAlignment="Bottom" Width="80" Click="btnSubtract_Click" TabIndex="4">Subtract</Button>
+    </Grid>
+</Window>

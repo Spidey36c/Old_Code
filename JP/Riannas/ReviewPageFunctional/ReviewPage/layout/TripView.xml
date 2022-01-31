@@ -1,0 +1,117 @@
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:padding="10dip"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content">
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dip"
+        android:text="TripMembers"
+    />
+    <Spinner
+        android:id="@+id/TripViewDropdown"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:backgroundTint = "#ff0000"
+       
+    />
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dip"
+        android:text="Name Of Trip"
+        android:layout_marginLeft="130.0dp"
+        android:layout_marginBottom="10dp"
+        android:id="@+id/TripName" 
+    />
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dip"
+        android:text="Departure: Date"
+        android:layout_marginLeft="130.0dp"
+        android:layout_marginBottom="0dp" 
+        android:id="@+id/DepartDate" 
+    />
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dip"
+        android:text="Departure Time: "
+        android:layout_marginLeft="130.0dp"
+        android:layout_marginBottom="0dp" 
+        android:id="@+id/DepartTime" 
+    />
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dip"
+        android:text="Arrival Date: "
+        android:layout_marginLeft="130.0dp"
+        android:layout_marginBottom="0dp"
+        android:id="@+id/ArriveDate" 
+    />
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dip"
+        android:text="Arrival Time: "
+        android:layout_marginLeft="130.0dp"
+        android:layout_marginBottom="5dp"
+        android:id="@+id/ArriveTime" 
+    />
+    <Button
+        android:layout_height="37.5dp"
+        android:layout_width="361.0dp"
+        android:layout_marginTop="10dip"
+        android:text="Request a Trip"
+        android:id="@+id/RequestTrip" 
+    />
+
+
+    <Button
+        android:layout_height="37.5dp"
+        android:layout_width="361.0dp"
+        android:layout_marginTop="10dip"
+        android:text="Review Driver"
+        android:id="@+id/button1" />
+
+
+
+    <!-- <Gridview
+        android:layout_width="344.0dp"
+        android:layout_height="227.5dp"
+        android:id="@+id/gridview1"
+        android:layout_marginTop="10.0dp"
+        android:layout_marginLeft="10.0dp"/>-->
+
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="86.0dp"
+        android:layout_alignParentBottom="true"
+        android:weightSum="2"
+        android:id="@+id/linearLayout1">
+        <Button
+            android:text="Map"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textSize="50px"
+            android:background="@drawable/buttonborder"
+            android:id="@+id/MapButton"/>
+        <Button
+            android:text="Driver"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textSize="50px"
+            android:background="@drawable/buttonborder"
+            android:id="@+id/DriverButton" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,7 @@
+﻿  Source.cpp
+z:\old_zdrive\oop\linkedlistproject\linkedlistproject\source.cpp(16): warning C4305: 'initializing': truncation from 'double' to 'float'
+z:\old_zdrive\oop\linkedlistproject\linkedlistproject\source.cpp(17): warning C4305: 'initializing': truncation from 'double' to 'float'
+z:\old_zdrive\oop\linkedlistproject\linkedlistproject\source.cpp(18): warning C4305: 'initializing': truncation from 'double' to 'float'
+z:\old_zdrive\oop\linkedlistproject\linkedlistproject\source.cpp(20): warning C4305: 'initializing': truncation from 'double' to 'float'
+  LinkedListProject.vcxproj -> Z:\old_zdrive\OOP\LinkedListProject\Debug\LinkedListProject.exe
+  LinkedListProject.vcxproj -> Z:\old_zdrive\OOP\LinkedListProject\Debug\LinkedListProject.pdb (Partial PDB)

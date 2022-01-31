@@ -1,0 +1,6 @@
+D:\CST 415\SampleUDPApp\SampleUDPApp\bin\Debug\SampleUDPApp.exe.config
+D:\CST 415\SampleUDPApp\SampleUDPApp\bin\Debug\SampleUDPApp.exe
+D:\CST 415\SampleUDPApp\SampleUDPApp\bin\Debug\SampleUDPApp.pdb
+D:\CST 415\SampleUDPApp\SampleUDPApp\obj\Debug\SampleUDPApp.csproj.CoreCompileInputs.cache
+D:\CST 415\SampleUDPApp\SampleUDPApp\obj\Debug\SampleUDPApp.exe
+D:\CST 415\SampleUDPApp\SampleUDPApp\obj\Debug\SampleUDPApp.pdb
